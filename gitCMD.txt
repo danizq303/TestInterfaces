@@ -1,0 +1,4 @@
+Submodules:
+git submodule add (Repo-URL) (Dir)
+Set
+git clone (url-repositorio)
