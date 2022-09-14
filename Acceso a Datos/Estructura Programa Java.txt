@@ -1,0 +1,431 @@
+Estructura Programa Java
+
+Identificadores
+
+	letra
+	$
+	_
+	no se pueden usar palabras reservadas
+
+Variables
+
+	en minuscula
+
+Constantes
+
+	en mayuscula o con final antes de la variable
+
+Clases
+
+	primera letra en mayuscula
+
+Meotodos
+
+	en minuscula
+
+Tipos de datos
+
+	enteros
+
+		byte numeros muy pequenios
+		short
+		int
+		long
+
+	reales
+
+		float
+		double
+
+	caracteres
+
+		char
+
+	booleanos
+
+		true
+		false
+
+Tipos de dato por referencia
+
+	cadenas
+
+		String
+
+			String cadena = "Hola";
+			
+
+Operadores
+
+	+ - * / (trunca la division) %
+
+	++ --
+
+	+= -= *= /= %=
+
+	== > < >= <= !=
+
+	&& || !
+
+Clases Envolventes
+
+	integer.parseInt (cadena)
+	short.parseShort (cadena)
+	byte.parseByte (cadena)
+	float.parseFloat (cadena)
+	double.parseDouble (cadena)
+
+Definir Clases
+
+	public class Persona {
+		String nif;
+		String nombre;
+		short edad;
+		/*
+		Constructor
+		Persona (String n, String nombre, short edad) {
+			this.nif=nif;
+			this.nombre=nombre;
+			this.edad=edad;
+		*/
+		}
+	}
+
+	public class Persona {
+		public static void main() {
+			Persona pers = null
+			pers = new Persona("1111111Q","Juan",10);
+		}
+	}
+
+	public class Persona {
+		public static void main() {
+			Persona pers = null
+			pers = new Persona();
+		}
+	}
+
+	nada: cualquiera que forme parte del paquete podra acceder
+	public: acceso de cualquier paquete
+	protected: solo acceden las calses que heredan
+	private: solo puede acceder la propia clase
+
+Metodos
+
+	Estructura
+
+		[especificaroes][tipo.devuelto]nombre.metodo([lista.parametros]) [throw excepciones]
+
+		Ejemplo
+
+				public static void main (String[] args) throws Exception
+
+		Tipos
+
+			Tarea : void
+			Obtener valor
+
+		Entrada:
+
+			Interna
+			Externa: parametros
+
+	getter y setter
+
+		get: suelen ser publicos, sirve para obtener algo
+
+			public String getNif() {
+				return nif;
+			}
+
+		set: tipo void modifica algo
+
+			public void setNif(String nif) {
+				this.nif = nif;
+			}
+
+	batalla
+
+		toString() comprobar los datos que tiene un objeto | permite que al hacer el print solo del objeto haga el toString
+
+			public String toString() {
+				return nif + "" + nombre + "" + edad;
+			}
+
+			sout(pers); (hace el pers.toString)
+
+
+Clase String
+
+	String.valueOf () | transforma argumento a cadena
+
+	.toUpperCase()); | devuelve el objeto a mayuscula
+	
+	.toLowerCase(); | devuelve el objeto a minuscula
+
+	.charAt(n) | devuelve la posicion introducida del objeto
+
+	.equals(cadena a comparar) | devuelve true o false
+
+	.equalsIgnoreCase() | compara ignorando mayusculas
+
+	.length() | tamanyo cadena
+
+	.indexOf(caracter|cadena,pos) | devuelve la posicion en la que aparece por primera vez el caracter, si no encuentra caracter devuelve numero negativo
+
+	.lastIndexOf() | devuelve la posicion en la que aparece por primera vez el caracter desde el final, si no encuentra caracter devuelve numero negativo
+
+	.concat() | devuelve las cadenas concatenadas
+
+	.substring(posI,posF) | solo coje unos menos que la posF, si solo se pone un argumento cojera desde el argumento hasta el final de la cadena
+
+	.compareTo(cadena) | igual que strcmp (0 si son iguales >0 si cad1 es mayor que cad2 y <0 si cad2 es mayor que cad1)
+
+	.compareToIgnoreCase | no tiene en cuenta mayusculas y minusculas
+
+	.trim() | devuelve cadena sin espacios no significativos
+
+	.isEmpty() | devuelve true o false si la cadena esta vacia
+
+	.replace(c1,c2) | cambia todos los caracteres o cadenas de una cadena
+
+	.startsWith() | devuelve true o flase si la cadena empieza por la cadena indicada
+
+	.endsWith() | devuelve true o flase si la cadena acaba por la cadena indicada
+
+Metodos estaticos (sale directamente de la clase)
+
+Salida de datos
+
+	System.out.println(cadena + 123);
+	System.out.print() lo mismo pero sin salto de linea
+	System.out.prinf(%[indice][identificadores][ancho][num.decimales]tipo.mascarilla)
+
+		System.out.printf("Nombre: %S \n",nombre)
+
+		tipo.mascarilla
+
+			c C caracter mayus o minuscula
+			b B booleanos
+			d   digitos
+			f   reales
+			s S cadena
+			tc	fecha
+
+Entrada de datos (import java.io.*)
+
+	ImputStreamReader flujo;
+	BufferedReader teclado;
+
+	flujo = new ImputStreamReader(System.in);
+	teclado = new BufferedReader(flujo);
+
+
+	BufferedReader teclado = new BufferedReader(new ImputStreamReader(System.in));
+
+	nombre = teclado.readLine();
+	num = Integer.parseInt(teclado.readLine());
+
+Entrada de datos (import java.util.Scanner*)
+
+	Scanner sc = new Scanner(System.in);
+	sc.nextInt()
+	sc.nextFloat()
+	sc.nextLine() coje todo
+	sc.next() corta en el espacio
+
+
+Bucles
+
+	while
+
+		while (condicion)
+			instruccion;
+
+		while (condicion){
+			instrucciones;
+		}
+
+	do (mientras la condicion se cumpla)
+
+		do {
+			instrucciones
+		}while (condicion);
+
+	for (mientras no supere valor final)
+
+		for (inicializacion; condicion; incremento)
+			instruccion;
+
+		for (inicializacion; condicion; incremento) {
+			instrucciones;
+		}
+
+		Ejemplo:
+
+			for (i=1;i<=10;[i=i+1,++i,i++])
+	
+	for (int var:numEnt)
+		sout(var);
+
+
+Arrays
+
+	tipo [] nombre | aNum = new int [TAM]
+	tipo nombre []
+	int [] aNum = {3,2,1}
+	int [] aNum = new int [TAM]
+	int [] aNum = new int [TAM] {1,2,3}
+
+	Los arrays de tipo string se inicializan a null
+
+Matrizes
+
+	tipo [][] nombre = new tipo [TAMF][TAMC];
+	tipo [][] nombre = { {1,2,3}, {101,102,103} };
+	tipo [][] nombre = new tipo [TAMF][]; | matriz irregular
+
+		int [][] mNum = new int [3][]
+		int [0] mNum = new int [3]
+		int [1] mNum = new int [1]
+		int [2] mNum = new int [2]
+	
+	matriz.length | numero de elementos de la matriz
+	matriz[0].length | numero de elementos de una fila
+
+Clase Arrays (java.utils.Arrays)
+
+	System.arraycopy(aOriginal,posOriginal,aDestino,posDestino,numElementos);
+	Arrays.sort(array,[pos,elemento(-1)]); (va desde la posicion indicada)
+	Arrays.sort(array,Collections.reverseOrder()); | ordenarlo de forma invertida
+	Arrays.binarySearch(array,[posI,elementoF],dato); (si no lo encuentra valor negativo, si lo encuentra devuelve posicion) | el array debe estar ordenado
+	Arrays.equals(a1,a2);
+	Arrays.deepEquals(m1,m2);
+	Arrays.fill(array,dato);	Rellenar todo el array con un mismo dato
+	Arrays.toString(array);
+
+Clase Collection
+
+	.add()
+	.remove()
+	.size()
+	.isEmpty()
+	.contains()
+	.clear()
+	.addAll() add una coleccion a otra
+	.removeAll() borra todos los registros que sean igual al parametro
+	.retainAll() borra todos los que no esten en el parametro
+	.containsAll() devuelve true or false si una coleccion contiene todos los elementos de la coleccion dada por parametro
+
+Clase List
+
+	.add(indice,obj) add elemento en un determinado indice
+	.remove(indice) borra el elemento en ese indice
+	.get(indice)
+
+
+Clase GregorianCalendar (java.utils)
+
+	GregorianCalendar gc = new GregorianCalendar() | (anyo, mes, dia) | (anyo,mes,dia,hh,mm,ss) | (anyo,mes,dia,hh,mm);
+	sout(gc.getTime()); 	Obtiene la fecha y hora de hoy en formato date
+	Date dt = gc.getTime();
+	gc.get(Calendar.[]);
+		DAY_OF_WEEK
+		DAY_OF_YEAR
+		DAY_OF_WEEK_IN_MONTH
+		WEEK_OF_YEAR
+		WEEK_OF_MONTH
+		MONTH
+		YEAR
+		AM_PM | 0 si es AM 1 si es AM_PM
+		HOUR | 0 a 11
+		HOUR_OF_DAY | 0 a 23
+		MINUTE
+		SECOND
+	gc.getTimeInMilis()
+
+Clase Date (java.utils)
+
+	Date hoy = new Date();	Obtiene la fecha de hoy
+
+	java.text.DateFormat
+		DateFormat formato = DateFormat.getDateInstance(DateFormat.Short,Locale.UK,Medium,Long,Full);
+		sout(formato.format(hoy));
+		Locale fCast = new Locale("es","ES","Traditional.Win");
+		DateFormat formato = DateFormat.getDateInstance(DateFormat.SHORT,fcast);
+
+Clase StringTokenizer
+
+	StringTokenizer = new StringTokenizer(cadena) | separa la cadena en tokens en base a la separacion por espacios
+					  new StringTokenizer(cadena," ,?,(") | separa tokens en funcion de lo q introduzcamos
+
+		.countTokens() 		| devuleve el numero de tokens que tiene
+		.hasMoreTokens() 	| devuelve true o false si tiene mas tokens
+		.nextToken()		| obtiene el proximo token
+		
+Clase Math
+
+	Math.abs(n) 	| valor absoluto de un numero
+		.ceil(n)	| redondea a la alza
+		.floor(n)	| trunca
+		.round		| redondea
+		.max(n,m)	| devuelve max
+		.min(n,m)	| devuelve min
+		.pow(n,m)	| eleva numero a n
+		.sqrt(n)	| devuelve raiz
+		.random		| devuelve numer entre 0 y 0.99
+		.PI			| devuelve num PI
+
+Clase Random
+
+	Random rd = new Random();
+	sout(random.nextInt(n))
+
+Clase Character 
+
+	.isDigit(car)
+	.isLowerCase(car)
+	.isUpperCase(car)
+	.isLetter(car)
+	.isLetterOrDigit(car)
+	.isAlphabetic(car)
+	.isSpaceChar(car)
+	.isWhiteSpace(car)
+	.toUpperCase(car)
+	.toLowerCase(car)
+	.toString(car)
+
+
+Clases Abstractas
+
+	-Al menos un metodo abstracto
+	-Metodos abstracto unicamente en clase abstracta
+	-Los metodos abstractos no tienene cuerpo
+	-Pueden contener metodos no abstractos
+	-Una clase abstracta no se puede instanciar
+
+Clases Interface
+
+	-Todos los metodos son abstracto
+	-No se puede instanciar
+	-No adminten atributos sera public static final por defecto
+	-Se usa con implements en vez de con extends
+	-Se puede implementar mas de una clase
+
+Clases Enum
+
+	ClaseEnum diaM = ClaseEnum.TUESDAY;
+        ClaseEnum diaJ = ClaseEnum.THURSDAY;
+        System.out.println(diaM.name());
+        System.out.println(diaJ.name());
+
+        System.out.println(diaM.ordinal());
+        ClaseEnum[] dias = ClaseEnum.values();
+
+        for (ClaseEnum d: dias) {
+            System.out.println(d);
+        }
+
+valueOf
+
+	Obtiene el valor de algo si existe en la clase, si no existe IlegalArgumentException, si es nulo NullArgumentException

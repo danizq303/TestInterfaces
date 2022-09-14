@@ -1,0 +1,28 @@
+1 - c
+2 - e
+3 - h
+4 - b
+5 - a
+6 - d
+7 - f
+8 - g
+
+
+1 - F
+2 - T
+3 - T
+4 - F
+5 - F
+6 - T
+
+
+1 - cheering
+2 - to compete
+3 - typing
+4 - to type
+5 - to beat
+6 - playing
+7 - watch
+8 - to watch
+9 - to run, jump or throw
+10 - classify
