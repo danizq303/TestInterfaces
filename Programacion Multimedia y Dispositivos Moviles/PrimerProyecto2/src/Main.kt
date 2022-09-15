@@ -128,7 +128,6 @@ fun funcion2(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int {
 
 fun funcion3(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
 
-
     return if (num1 == null && num2 == null && num3 == null && num4 == null)
         null
     else {
