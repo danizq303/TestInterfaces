@@ -28,11 +28,15 @@ fun main() {
     println("Ejercicio 6:")
     mostrarChars(10)
 
-    //Ej7
-    println("Ejercicio 7:")
+    //Ej8
+    println("Ejercicio 8:")
     dibujaTorre(10,4)
     println()
     dibujarPiramide(9)
+
+    //Ej9
+    println("Ejercicio 9:")
+    juegoAvinar(0..9)
 }
 
 fun transformaIntADouble(num : Int) : Double {
@@ -173,4 +177,43 @@ fun dibujarPiramide(lado : Int) {
 
         println('\\')
     }
+}
+
+//Ej9
+fun juegoAvinar(rango : IntRange) {
+    println("Encuentra un numero entre $rango")
+    val numeroBuscado = rango.random()
+
+    do {
+        println("Escribe tu numero")
+        val opcionUsuario = readIntFromKeyboard()
+        val encontrado = when {
+            numeroBuscado > opcionUsuario -> {
+                println("El numero buscado es mas grande")
+                false
+            }
+            numeroBuscado < opcionUsuario -> {
+                println("El numero buscado es mas peque")
+                false
+            }
+            else -> {
+                println("Enhorabuena! El numero era $numeroBuscado")
+                true
+            }
+        }
+    } while (!encontrado)
+}
+
+fun readIntFromKeyboard(): Int {
+    var result : Int?
+    do {
+        val selectedOption = readLine()
+        result = try {
+            selectedOption?.toInt()
+        } catch (e: NumberFormatException) {
+            println("Lo que has introducido no es un número.")
+            null
+        }
+    } while (result == null)
+    return result
 }
