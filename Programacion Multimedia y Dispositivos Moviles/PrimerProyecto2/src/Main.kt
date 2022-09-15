@@ -29,7 +29,10 @@ fun main() {
     mostrarChars(10)
 
     //Ej7
-
+    println("Ejercicio 7:")
+    dibujaTorre(10,4)
+    println()
+    dibujarPiramide(9)
 }
 
 fun transformaIntADouble(num : Int) : Double {
@@ -141,5 +144,33 @@ fun funcion3(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
 
 //Ej8
 fun dibujaTorre(pisos : Int, ventanas : Int) {
-    
+    repeat(10 + ventanas) {
+        print('_')
+    }
+
+    println()
+
+    repeat(pisos) {
+        print('|')
+        repeat(ventanas) {
+            print("_N_")
+        }
+        println('|')
+    }
+}
+
+fun dibujarPiramide(lado : Int) {
+    repeat(lado) {
+        repeat(lado - it) {
+            print(' ')
+        }
+
+        print('/')
+
+        repeat(it) {
+            print("__")
+        }
+
+        println('\\')
+    }
 }
