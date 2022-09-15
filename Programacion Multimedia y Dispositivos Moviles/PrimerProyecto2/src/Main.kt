@@ -138,3 +138,8 @@ fun funcion3(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
         suma
     }
 }
+
+//Ej8
+fun dibujaTorre(pisos : Int, ventanas : Int) {
+    
+}
