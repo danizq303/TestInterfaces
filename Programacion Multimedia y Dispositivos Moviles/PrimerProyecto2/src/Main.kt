@@ -28,7 +28,8 @@ fun main() {
     println("Ejercicio 6:")
     mostrarChars(10)
 
-    
+    //Ej7
+
 }
 
 fun transformaIntADouble(num : Int) : Double {
@@ -104,5 +105,37 @@ fun mostrarChars(num : Int ) {
             println()
 
         print(it.toChar())
+    }
+}
+
+//Ej7
+fun funcion1(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
+    return if (num1 == null || num2 == null || num3 == null || num4 == null)
+        null
+    else
+        num1 + num2 + num3 + num4
+}
+
+fun funcion2(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int {
+    var suma = 0
+    suma += num1 ?: 0
+    suma += num2 ?: 0
+    suma += num3 ?: 0
+    suma += num4 ?: 0
+
+    return suma
+}
+
+fun funcion3(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
+
+
+    return if (num1 == null && num2 == null && num3 == null && num4 == null)
+        null
+    else {
+        var suma = num1 ?: 0
+        suma += num2 ?: 0
+        suma += num3 ?: 0
+        suma += num4 ?: 0
+        suma
     }
 }
