@@ -29,6 +29,7 @@ public class Clase01 {
         imprimirArrayList(true,al);
 
         System.out.println("Imprimir izquierda");
+        al.removeAll();
         imprimirArrayList(false,al);
     }
 
@@ -36,12 +37,20 @@ public class Clase01 {
         ListIterator<Integer> lit = array.listIterator();
 
         if (direccionDerecha)
-            while (lit.hasNext())
-                System.out.println(lit.next());
+            if (!lit.hasNext())
+                System.out.println("Coleccion vacia");
+            else
+                do {
+                    System.out.println(lit.next());
+                } while (lit.hasNext());
         else {
             lit = array.listIterator(array.size());
-            while (lit.hasPrevious())
-                System.out.println(lit.previous());
+            if (!lit.hasPrevious())
+                System.out.println("Coleccion vacia");
+            else
+                do {
+                    System.out.println(lit.previous());
+                } while (lit.hasPrevious());
         }
     }
 }
