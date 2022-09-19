@@ -1,19 +1,18 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Principal {
-
+public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> array = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce numero de 4 cifras: ");
-        String num = sc.nextLine();
+        int num = Integer.parseInt(sc.nextLine());
 
-        while (num.length() == 4) {
-            array.add(Integer.parseInt(num));
+        while (num >= 1000 && num < 10000) {
+            array.add(num);
             System.out.println("Introduce numero de 4 cifras: ");
-            num = sc.nextLine();
+            num = Integer.parseInt(sc.nextLine());
         }
 
         sc.close();

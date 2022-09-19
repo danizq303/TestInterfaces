@@ -304,7 +304,7 @@ Clase Arrays (java.utils.Arrays)
 	Arrays.fill(array,dato);	Rellenar todo el array con un mismo dato
 	Arrays.toString(array);
 
-Clase Collection
+Interfaz Collection
 
 	.add()
 	.remove()
@@ -316,13 +316,35 @@ Clase Collection
 	.removeAll() borra todos los registros que sean igual al parametro
 	.retainAll() borra todos los que no esten en el parametro
 	.containsAll() devuelve true or false si una coleccion contiene todos los elementos de la coleccion dada por parametro
+	.toArray()
+	.iterator()
 
-Clase List
+Intefaz List
 
 	.add(indice,obj) add elemento en un determinado indice
 	.remove(indice) borra el elemento en ese indice
 	.get(indice)
+	.set(indice,obj) sustituye elemento en un determinado indice
+	.indexOf(obj) busca el indice donde se encuentra el objeto, si no lo encuentra devuelve -1
+	.lasIndex() busca de derecha a izquierda
+	.addAll(indice,coleccion) inserta coleccion en el indice
+	.listIterator([indice])
+	
 
+Interfaz Iterator
+
+	.next()
+	.hasNext() indica si hay un siguiente elemento
+	.remove()
+
+Intefaz ListIterator (hereda de interator)
+
+	.add(obj) add elemento delante del iterador
+	.set(obj) sustituye el objeto que este en el nexto por el que se pasa por parametro
+	.previous()
+	.hasPrevious()
+	.nextIndex() obtiene el indice del elemento siguiente
+	.previousIndex()
 
 Clase GregorianCalendar (java.utils)
 
