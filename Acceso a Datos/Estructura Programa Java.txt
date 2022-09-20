@@ -304,6 +304,13 @@ Clase Arrays (java.utils.Arrays)
 	Arrays.fill(array,dato);	Rellenar todo el array con un mismo dato
 	Arrays.toString(array);
 
+Interface Set | cuando no queramos tener duplicados
+
+
+Interfaz HashSet (Hereda de Set)
+
+	
+
 Interfaz Collection
 
 	.add()
@@ -329,7 +336,15 @@ Intefaz List
 	.lasIndex() busca de derecha a izquierda
 	.addAll(indice,coleccion) inserta coleccion en el indice
 	.listIterator([indice])
-	
+
+Clase LinkedList (hereda de Collection)
+
+	.getFirst()
+	.getLast()
+	.addFirst(obj)
+	.addLast(obj)
+	.removeFirst()
+	.removeLast()
 
 Interfaz Iterator
 
