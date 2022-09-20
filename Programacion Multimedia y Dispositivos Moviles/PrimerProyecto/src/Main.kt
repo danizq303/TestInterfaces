@@ -1,4 +1,3 @@
-import java.util.Scanner
 import kotlin.random.Random
 
 fun main() {
@@ -274,29 +273,46 @@ fun contarLista() {
 //Ej12
 fun ahorcado() {
     val palabra = "Ahorcado"
-
-    var listaFinal = mutableListOf<Char>()
-    var listaPalabra = palabra.uppercase().toCharArray().asList()
-
-    
-
-    /*for (c in palabra)
-        listaFinal.add('_')*/
-
-    println(listaPalabra)
+    var intentos = 0
+    val letrasUsadas = mutableListOf<Char>()
 
     do {
         println("Introduce letra:")
-        var car = Scanner(System.`in`)
-        for (c in listaPalabra)
-            if (c.equals(car)) {
+        println("Has usado las siguiente letras: $letrasUsadas")
+        val car = readCharFromKeyboard().uppercaseChar()
 
-            }
-    } while (true)
+        if (letrasUsadas.contains(car))
+            println("Ya has usado la letra $car")
+        else
+            letrasUsadas.add(car)
 
+        val palabraEnOculto = palabraOculta(palabra,letrasUsadas)
+        println(palabraEnOculto)
 
-    //var car = Scanner(System.`in`)
+        intentos++
+    } while (palabraEnOculto.contains('_'))
 
+    println("Has acertado la palabra. La palabra era $palabra. Has necesitado $intentos intentos")
+}
 
+fun palabraOculta(palabra: String, letras: List<Char>): String {
+    var output = ""
 
+    for (c in palabra.uppercase().toCharArray()) {
+        if (letras.contains(c))
+            output += c
+        else
+            output += '_'
+    }
+
+    return output
+}
+
+fun readCharFromKeyboard() : Char {
+    var result: Char?
+    do {
+        val selectedOption = readLine()
+        result = if (selectedOption?.length == 1) selectedOption[0] else null
+    } while (result == null)
+    return result
 }

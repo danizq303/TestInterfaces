@@ -329,7 +329,15 @@ Intefaz List
 	.lasIndex() busca de derecha a izquierda
 	.addAll(indice,coleccion) inserta coleccion en el indice
 	.listIterator([indice])
-	
+
+Clase LinkedList (hereda de Collection)
+
+	.getFirst()
+	.getLast()
+	.addFirst(obj)
+	.addLast(obj)
+	.removeFirst()
+	.removeLast()
 
 Interfaz Iterator
 
