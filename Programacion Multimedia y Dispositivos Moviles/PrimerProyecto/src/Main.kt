@@ -1,5 +1,8 @@
+import java.util.Scanner
+import kotlin.random.Random
+
 fun main() {
-    //Ej1
+    /*//Ej1
     println("Ejercicio 1:")
     println(transformaIntADouble(4))
     println(diHola("Dani"))
@@ -30,13 +33,24 @@ fun main() {
 
     //Ej8
     println("Ejercicio 8:")
-    dibujaTorre(10,4)
+    dibujaTorre(10,3)
     println()
     dibujarPiramide(9)
 
     //Ej9
     println("Ejercicio 9:")
     juegoAvinar(0..9)
+
+    //Ej10
+    println("Ejercicio 10:")
+    println(listaRandom())
+    println(listaResultado(listaRandom()))
+
+    //Ej11
+    contarLista()*/
+
+    //Ej2
+    ahorcado()
 }
 
 fun transformaIntADouble(num : Int) : Double {
@@ -148,7 +162,7 @@ fun funcion3(num1 : Int?, num2 : Int?, num3 : Int?, num4 : Int?) : Int? {
 
 //Ej8
 fun dibujaTorre(pisos : Int, ventanas : Int) {
-    repeat(10 + ventanas) {
+    repeat(ventanas * 3 + 2) {
         print('_')
     }
 
@@ -219,3 +233,70 @@ fun readIntFromKeyboard(): Int {
 }
 
 //Ej10
+fun listaRandom() : List<Int> {
+    return MutableList(Random.nextInt(90,110)) {Random.nextInt(0,10)}
+}
+
+fun listaResultado(lista : List<Int>) : List<Int> {
+    val output = mutableListOf<Int>()
+
+    for (num in 0..9) {
+        var cont = 0
+        for (numero in lista) {
+            if (num == numero)
+                cont++
+        }
+        output.add(num,cont)
+    }
+
+    return output
+}
+
+//Ej11
+fun contarLista() {
+    val lista = listOf("Hola,", 2, 3, "¿", 0.1, "Qué", 1, "tal", 0.9, "?")
+    var sumaNums = 0.0
+    var contenido = ""
+
+    lista.forEach {
+        when (it) {
+            is String -> contenido += "$it "
+            is Double -> sumaNums += it
+            is Int -> sumaNums += it
+        }
+    }
+
+    println("La lista es $lista")
+    println("La suma de numeros es $sumaNums")
+    println("La suma del contenido es $contenido")
+}
+
+//Ej12
+fun ahorcado() {
+    val palabra = "Ahorcado"
+
+    var listaFinal = mutableListOf<Char>()
+    var listaPalabra = palabra.uppercase().toCharArray().asList()
+
+    
+
+    /*for (c in palabra)
+        listaFinal.add('_')*/
+
+    println(listaPalabra)
+
+    do {
+        println("Introduce letra:")
+        var car = Scanner(System.`in`)
+        for (c in listaPalabra)
+            if (c.equals(car)) {
+
+            }
+    } while (true)
+
+
+    //var car = Scanner(System.`in`)
+
+
+
+}
