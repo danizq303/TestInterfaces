@@ -304,6 +304,13 @@ Clase Arrays (java.utils.Arrays)
 	Arrays.fill(array,dato);	Rellenar todo el array con un mismo dato
 	Arrays.toString(array);
 
+Interface Set | cuando no queramos tener duplicados
+
+
+Interfaz HashSet (Hereda de Set)
+
+	
+
 Interfaz Collection
 
 	.add()

@@ -1,8 +1,6 @@
 package Colecciones;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.ListIterator;
 
 public class Clase02 {
     public static void main(String[] args) {
