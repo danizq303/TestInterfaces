@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    /*//Ej1
+    //Ej1
     println("Ejercicio 1:")
     println(transformaIntADouble(4))
     println(diHola("Dani"))
@@ -32,7 +32,7 @@ fun main() {
 
     //Ej8
     println("Ejercicio 8:")
-    dibujaTorre(10,3)
+    dibujaTorre(24,8)
     println()
     dibujarPiramide(9)
 
@@ -46,9 +46,11 @@ fun main() {
     println(listaResultado(listaRandom()))
 
     //Ej11
-    contarLista()*/
+    println("Ejercicio 11:")
+    contarLista()
 
-    //Ej2
+    //Ej12
+    println("Ejericio 12:")
     ahorcado()
 }
 
