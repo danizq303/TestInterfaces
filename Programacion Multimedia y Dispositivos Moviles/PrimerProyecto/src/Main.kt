@@ -77,25 +77,22 @@ fun sumaString(num1 : String, num2 : String) : Double {
  }
 
 //Ej3
-fun calcualrPrecio1(edad : Int, nombre : String) : String {
-    val result : String
-    if (edad < 18)
-        result = "$nombre, debes abonar 5$"
-    else if (edad in 18..65)
-        result = "$nombre, debes abonar 10$"
-    else
-        result = "$nombre, para ti es gratis"
+fun calcualrPrecio1(edad: Int, nombre: String): String {
 
-    return result
+    return if (edad < 18)
+        "$nombre, debes abonar 5$"
+    else if (edad in 18..65)
+        "$nombre, debes abonar 10$"
+    else
+        "$nombre, para ti es gratis"
 }
 
 //Ej4
 fun calcualrPrecio2(edad : Int, nombre : String) : String {
-    val result : String
-    when {
-        edad < 18 -> result = "$nombre, debes abonar 5$"
-        edad in 18..65 -> result = "$nombre, debes abonar 10$"
-        else -> result = "$nombre, para ti es gratis"
+    val result : String = when {
+        edad < 18 -> "$nombre, debes abonar 5$"
+        edad in 18..65 -> "$nombre, debes abonar 10$"
+        else -> "$nombre, para ti es gratis"
     }
 
     return result
@@ -299,10 +296,10 @@ fun palabraOculta(palabra: String, letras: List<Char>): String {
     var output = ""
 
     for (c in palabra.uppercase().toCharArray()) {
-        if (letras.contains(c))
-            output += c
+        output += if (letras.contains(c))
+            c
         else
-            output += '_'
+            '_'
     }
 
     return output
