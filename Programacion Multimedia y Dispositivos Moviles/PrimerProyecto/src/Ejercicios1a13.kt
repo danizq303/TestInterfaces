@@ -52,6 +52,21 @@ fun main() {
     //Ej12
     println("Ejericio 12:")
     ahorcado()
+
+    //Ej13
+    println("Ejercicio 13:")
+    val list = listOf<Any>("1",2,4)
+    val ejercicio1 = { println("Hola")}
+    ejercicio1()
+
+    val ejercicio2 = {integer : Int -> println("Hola $integer")}
+    ejercicio2(2)
+
+    val ejercicio3 = {integer : Int, listInteger : List<Any> -> println("Hola ${integer + listInteger.size}")}
+    ejercicio3(2, list)
+
+    val ejericio4 = {integer : Int, listInteger : List<Any> -> integer + listInteger.size}
+    println("El numero es: ${ejericio4(3,list)}")
 }
 
 fun transformaIntADouble(num : Int) : Double {
