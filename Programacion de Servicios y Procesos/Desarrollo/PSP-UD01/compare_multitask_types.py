@@ -4,6 +4,7 @@ import logging
 
 from logs_tools import logcfg
 
+import requests
 import time
 from multiprocessing import Process
 from threading import Thread

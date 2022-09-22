@@ -59,4 +59,6 @@ Abriremos un terminal dentro de la carpeta y levantaremos la maquina:
 
 ## Pruebas
 
-Cuarto punto de la práctica
+Accederemos a http://192.168.56.202:8069 para comprobar que odoo esta funcionando.
+
+![](odoo2.png)

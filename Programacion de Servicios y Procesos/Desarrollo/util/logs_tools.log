@@ -25,3 +25,7 @@
 [2022-09-20 10:26:47,509] DEBUG    MainThread   - Mensaje de depuración
 [2022-09-20 10:26:47,509] ERROR    MainThread   - Mensaje de error
 [2022-09-20 10:26:47,509] DEBUG    MainThread   - 123
+[2022-09-22 09:07:59,244] DEBUG    MainThread   - Configuración de debug: {'version': 1, 'formatters': {'standard': {'comment_format': '[%(asctime)s] %(levelname)-8s %(name)-12s %(threadName)-12s - %(message)s', 'format': '[%(asctime)s] %(levelname)-8s %(threadName)-12s - %(message)s'}}, 'handlers': {'file': {'level': 'DEBUG', 'class': 'logging.FileHandler', 'formatter': 'standard', 'filename': 'c:\\Users\\AlumnoM\\Documents\\DAM2\\Programacion de Servicios y Procesos\\Desarrollo\\util\\logs_tools.log'}, 'stream': {'level': 'INFO', 'class': 'logging.StreamHandler', 'formatter': 'standard'}}, 'loggers': {'': {'handlers': ['file', 'stream'], 'level': 'DEBUG'}}}
+[2022-09-22 09:07:59,257] DEBUG    MainThread   - Mensaje de depuración
+[2022-09-22 09:07:59,258] ERROR    MainThread   - Mensaje de error
+[2022-09-22 09:07:59,258] DEBUG    MainThread   - 123
