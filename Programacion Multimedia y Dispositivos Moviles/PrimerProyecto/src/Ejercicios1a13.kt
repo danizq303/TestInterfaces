@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    /*//Ej1
+    //Ej1
     println("Ejercicio 1:")
     println(transformaIntADouble(4))
     println(diHola("Dani"))
@@ -32,7 +32,7 @@ fun main() {
 
     //Ej8
     println("Ejercicio 8:")
-    dibujaTorre(10,3)
+    dibujaTorre(24,8)
     println()
     dibujarPiramide(9)
 
@@ -46,10 +46,27 @@ fun main() {
     println(listaResultado(listaRandom()))
 
     //Ej11
-    contarLista()*/
+    println("Ejercicio 11:")
+    contarLista()
 
-    //Ej2
+    //Ej12
+    println("Ejericio 12:")
     ahorcado()
+
+    //Ej13
+    println("Ejercicio 13:")
+    val list = listOf<Any>("1",2,4)
+    val ejercicio1 = { println("Hola")}
+    ejercicio1()
+
+    val ejercicio2 = {integer : Int -> println("Hola $integer")}
+    ejercicio2(2)
+
+    val ejercicio3 = {integer : Int, listInteger : List<Any> -> println("Hola ${integer + listInteger.size}")}
+    ejercicio3(2, list)
+
+    val ejericio4 = {integer : Int, listInteger : List<Any> -> integer + listInteger.size}
+    println("El numero es: ${ejericio4(3,list)}")
 }
 
 fun transformaIntADouble(num : Int) : Double {
@@ -77,25 +94,22 @@ fun sumaString(num1 : String, num2 : String) : Double {
  }
 
 //Ej3
-fun calcualrPrecio1(edad : Int, nombre : String) : String {
-    val result : String
-    if (edad < 18)
-        result = "$nombre, debes abonar 5$"
-    else if (edad in 18..65)
-        result = "$nombre, debes abonar 10$"
-    else
-        result = "$nombre, para ti es gratis"
+fun calcualrPrecio1(edad: Int, nombre: String): String {
 
-    return result
+    return if (edad < 18)
+        "$nombre, debes abonar 5$"
+    else if (edad in 18..65)
+        "$nombre, debes abonar 10$"
+    else
+        "$nombre, para ti es gratis"
 }
 
 //Ej4
 fun calcualrPrecio2(edad : Int, nombre : String) : String {
-    val result : String
-    when {
-        edad < 18 -> result = "$nombre, debes abonar 5$"
-        edad in 18..65 -> result = "$nombre, debes abonar 10$"
-        else -> result = "$nombre, para ti es gratis"
+    val result : String = when {
+        edad < 18 -> "$nombre, debes abonar 5$"
+        edad in 18..65 -> "$nombre, debes abonar 10$"
+        else -> "$nombre, para ti es gratis"
     }
 
     return result
@@ -299,10 +313,10 @@ fun palabraOculta(palabra: String, letras: List<Char>): String {
     var output = ""
 
     for (c in palabra.uppercase().toCharArray()) {
-        if (letras.contains(c))
-            output += c
+        output += if (letras.contains(c))
+            c
         else
-            output += '_'
+            '_'
     }
 
     return output
