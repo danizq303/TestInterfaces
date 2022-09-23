@@ -309,7 +309,7 @@ Interface Set | cuando no queramos tener duplicados
 
 Interfaz HashSet (Hereda de Set)
 
-	
+	omite los repetidos
 
 Interfaz Collection
 
