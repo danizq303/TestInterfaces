@@ -1,6 +1,7 @@
 package Colecciones;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -12,18 +13,7 @@ public class Clase01 {
         al.add(2);
         al.add(3);
 
-        //al.add("Hola");
-        //al.add(true);
-
-        /*for (Object o : al) {
-            System.out.println(o);
-        }
-
-        Iterator <Integer> it = al.iterator();
-
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }*/
+        ListIterator<Integer> listIterator = al.listIterator();
 
         System.out.println("Imprimir derecha");
         imprimirLista(true, al);
