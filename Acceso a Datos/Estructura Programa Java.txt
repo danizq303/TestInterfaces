@@ -315,7 +315,15 @@ Clase LinkedHashSet (Hereda de Set y Collection)
 
 	omite repetidos y mantiene orden de introduccion
 
-Clase TreeSet (Hereda de Set y Collection)
+Intefaz SortedSet
+
+	.first()
+	.last()
+	.headSet(obj) devuelve los elementos menores al elemento pasado por parametro
+	.tailSet(obj) devuelve los elementos mayores o igual al elemento pasado por parametro
+	.subSet(obj1,obj2) devuelve los elementos comprendidos entre el obj1 y obj2
+
+Clase TreeSet (Hereda de Set, Collection y SortedSet)
 
 	omite repetidos y permite ordenarlos
 
