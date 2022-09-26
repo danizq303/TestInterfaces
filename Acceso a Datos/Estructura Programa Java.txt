@@ -307,9 +307,17 @@ Clase Arrays (java.utils.Arrays)
 Interface Set | cuando no queramos tener duplicados
 
 
-Interfaz HashSet (Hereda de Set)
+Clase HashSet (Hereda de Set y Collection)
 
 	omite los repetidos
+
+Clase LinkedHashSet (Hereda de Set y Collection)
+
+	omite repetidos y mantiene orden de introduccion
+
+Clase TreeSet (Hereda de Set y Collection)
+
+	omite repetidos y permite ordenarlos
 
 Interfaz Collection
 
