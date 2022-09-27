@@ -19,6 +19,8 @@ public class Persona2 implements Comparable <Persona2>{
 
     @Override
     public int compareTo(Persona2 o) {
+        int r = 0;
+
         return 0;
     }
 }

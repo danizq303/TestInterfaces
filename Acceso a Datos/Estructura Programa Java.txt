@@ -377,6 +377,10 @@ Intefaz ListIterator (hereda de interator)
 	.nextIndex() obtiene el indice del elemento siguiente
 	.previousIndex()
 
+Interface Map
+
+	
+
 Clase GregorianCalendar (java.utils)
 
 	GregorianCalendar gc = new GregorianCalendar() | (anyo, mes, dia) | (anyo,mes,dia,hh,mm,ss) | (anyo,mes,dia,hh,mm);
