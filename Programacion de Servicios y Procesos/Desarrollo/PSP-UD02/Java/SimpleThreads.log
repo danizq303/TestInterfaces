@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-09-26T19:21:44.074758Z</date>
+  <millis>1664220104074</millis>
+  <nanos>758000</nanos>
+  <sequence>0</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Comenzando la tarea MessageLoop
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:44.136592500Z</date>
+  <millis>1664220104136</millis>
+  <nanos>592500</nanos>
+  <sequence>1</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando el final de MessageLoop
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:44.155298Z</date>
+  <millis>1664220104155</millis>
+  <nanos>298000</nanos>
+  <sequence>2</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:45.171508700Z</date>
+  <millis>1664220105171</millis>
+  <nanos>508700</nanos>
+  <sequence>3</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:46.186342900Z</date>
+  <millis>1664220106186</millis>
+  <nanos>342900</nanos>
+  <sequence>4</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:47.192910900Z</date>
+  <millis>1664220107192</millis>
+  <nanos>910900</nanos>
+  <sequence>5</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:48.152512100Z</date>
+  <millis>1664220108152</millis>
+  <nanos>512100</nanos>
+  <sequence>6</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>19</thread>
+  <message>Thread-0: Umbrío por la pena, casi bruno
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:48.197985800Z</date>
+  <millis>1664220108197</millis>
+  <nanos>985800</nanos>
+  <sequence>7</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:49.203697400Z</date>
+  <millis>1664220109203</millis>
+  <nanos>697400</nanos>
+  <sequence>8</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:50.213403100Z</date>
+  <millis>1664220110213</millis>
+  <nanos>403100</nanos>
+  <sequence>9</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:51.219914600Z</date>
+  <millis>1664220111219</millis>
+  <nanos>914600</nanos>
+  <sequence>10</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:52.162266Z</date>
+  <millis>1664220112162</millis>
+  <nanos>266000</nanos>
+  <sequence>11</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>19</thread>
+  <message>Thread-0: Porque la pena tizna cuando estalla
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:52.222767400Z</date>
+  <millis>1664220112222</millis>
+  <nanos>767400</nanos>
+  <sequence>12</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:53.235310600Z</date>
+  <millis>1664220113235</millis>
+  <nanos>310600</nanos>
+  <sequence>13</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Esperando...
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:54.243874900Z</date>
+  <millis>1664220114243</millis>
+  <nanos>874900</nanos>
+  <sequence>14</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: Me he hartado. Procedo a interrumpir
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:54.248434900Z</date>
+  <millis>1664220114248</millis>
+  <nanos>434900</nanos>
+  <sequence>15</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>19</thread>
+  <message>Thread-0: Aún no esatba listo
+</message>
+</record>
+<record>
+  <date>2022-09-26T19:21:54.253420700Z</date>
+  <millis>1664220114253</millis>
+  <nanos>420700</nanos>
+  <sequence>16</sequence>
+  <logger>SimpleThreads</logger>
+  <level>INFO</level>
+  <class>SimpleThreads</class>
+  <method>threadMessage</method>
+  <thread>1</thread>
+  <message>main: ¡Por fin!
+</message>
+</record>
+</log>
