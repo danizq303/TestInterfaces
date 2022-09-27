@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     crearRascacielos(10, 4, 2)
 }
 
