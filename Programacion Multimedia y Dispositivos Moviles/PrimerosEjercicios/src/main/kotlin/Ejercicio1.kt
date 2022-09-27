@@ -31,7 +31,4 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas: Int, numeroTorres: Int) {
         }
         println()
     }
-
-
-
 }
