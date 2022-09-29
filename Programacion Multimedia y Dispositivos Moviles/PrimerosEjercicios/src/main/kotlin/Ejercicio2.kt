@@ -11,32 +11,12 @@ class Dado {
         this.numMax = numMax
     }
 
-
     fun tiradaUnica (): Int {
         return Random.nextInt(numMin, numMax)
     }
-
-    /*fun darValores(valMin: Int, valMax: Int) {
-        if (valMin <= valMax) {
-            numMax = valMax
-            numMin = valMin
-        } else {
-            println("Se han cambiado los valores min y maximo")
-            numMax = valMin
-            numMin = valMax
-        }
-    }*/
-
-    /*fun tiradaDoble (): Int {
-        val num1 = Random.nextInt(numMin, numMax)
-        println("num1 = $num1")
-        val num2 = Random.nextInt(numMin, numMax)
-        println("num2 = $num2")
-        return if (num1 == num2) num1 * num2 else num1 + num2
-    }*/
 }
 
-class Jugadores(var numero: Int) {
+class Jugadores(private var numero: Int) {
     var resultado = 0
 
     override fun toString(): String {
@@ -57,17 +37,7 @@ fun main() {
     aJugadores.forEach {
         repeat(100) {i ->
             it.resultado += dado1.tiradaUnica()
-        }
-    }
-
-    aJugadores.forEach {
-        repeat(100) {i ->
             it.resultado += dado2.tiradaUnica()
-        }
-    }
-
-    aJugadores.forEach {
-        repeat(100) {i ->
             it.resultado += dado3.tiradaUnica()
         }
     }
