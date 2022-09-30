@@ -18,21 +18,21 @@ public class Main {
         short cont = 0;
 
         final String ENDLOOPLABEL = "FIN";
-        final String GETDATALABEL = "Animal:";
+        final String GETDATALABEL = "Animal";
 
 
-        String animal = getStringFromKeyBoard(GETDATALABEL,sc);
+        String nombre = getStringFromKeyBoard(GETDATALABEL,sc);
 
-        while (!animal.equalsIgnoreCase(ENDLOOPLABEL)) {
-            if (arrayList.contains(animal))
+        while (!nombre.equalsIgnoreCase(ENDLOOPLABEL)) {
+            if (arrayList.contains(nombre))
                 cont++;
 
-            arrayList.add(animal);
+            arrayList.add(nombre);
 
-            animal = getStringFromKeyBoard(GETDATALABEL,sc);
+            nombre = getStringFromKeyBoard(GETDATALABEL,sc);
         }
 
-        System.out.println("Animales repetidos: " + cont);
+        System.out.println(GETDATALABEL + " repetido: " + cont);
     }
 
     public static void usandoHashSet(Scanner sc) {
@@ -47,15 +47,14 @@ public class Main {
         String animal = getStringFromKeyBoard(GETDATALABEL,sc);
 
         while (!animal.equalsIgnoreCase(ENDLOOPLABEL)) {
-            if (hashSet.contains(animal))
-                cont++;
+            cont++;
 
             hashSet.add(animal);
 
             animal = getStringFromKeyBoard(GETDATALABEL,sc);
         }
 
-        System.out.println("Animales repetidos: " + cont);
+        System.out.println("Animales repetidos: " + (cont - hashSet.size()));
     }
 
     public static String getStringFromKeyBoard(String label, Scanner sc) {
@@ -64,4 +63,3 @@ public class Main {
         return sc.nextLine();
     }
 }
-

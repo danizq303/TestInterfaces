@@ -377,9 +377,9 @@ Intefaz ListIterator (hereda de interator)
 	.nextIndex() obtiene el indice del elemento siguiente
 	.previousIndex()
 
-Interface Map
+Interface Map almacenan pares de valores
 
-	
+	isEmpty()
 
 Clase GregorianCalendar (java.utils)
 
