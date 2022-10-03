@@ -381,6 +381,24 @@ Interface Map almacenan pares de valores
 
 	isEmpty()
 
+Intefaz Map
+
+	(clave,valor)
+
+		clave almacenada mediante hash
+
+	.get(clave)
+	.put(clave,valor) | si existe la clave la sobrescribe y obtiene el valor antiguo
+	.remove(clave)
+	.containsKey(clave)
+	.containsValue(valor)
+	.putAll(Map)
+	.size()
+	.keySet() devuelve un Set con todas las claves
+	.values() devuelve Collection con todos los valores
+	.isEmpty()
+	.clear()
+
 Clase GregorianCalendar (java.utils)
 
 	GregorianCalendar gc = new GregorianCalendar() | (anyo, mes, dia) | (anyo,mes,dia,hh,mm,ss) | (anyo,mes,dia,hh,mm);

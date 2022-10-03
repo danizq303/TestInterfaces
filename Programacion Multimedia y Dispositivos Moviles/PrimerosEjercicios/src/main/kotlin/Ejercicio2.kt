@@ -42,11 +42,9 @@ fun main() {
         }
     }
 
-    val sortedList = aJugadores.sortedWith(compareBy({ it.resultado })).reversed()
-
-    println(mostrarResultado(sortedList))
+    println(mostrarResultado(aJugadores))
 }
 
 fun mostrarResultado(lista : List<Jugadores>): String {
-    return lista.toString()
+    return lista.sortedByDescending { it.resultado }.toString()
 }
