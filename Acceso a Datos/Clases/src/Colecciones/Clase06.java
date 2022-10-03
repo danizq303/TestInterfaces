@@ -15,10 +15,12 @@ public class Clase06 {
     }
 
     public static void imprimirMapa(HashMap<Integer, String > mapa) {
-        Collection<String> collection = mapa.values();
 
-        for (String s: collection) {
-            System.out.println(s);
-        }
+        if (!mapa.isEmpty()) {
+            for (String s: mapa.values()) {
+                System.out.println(s);
+            }
+        } else
+            System.out.println("HasMap vacio");
     }
 }
