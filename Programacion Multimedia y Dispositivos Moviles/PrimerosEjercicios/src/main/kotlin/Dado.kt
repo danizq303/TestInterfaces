@@ -17,9 +17,7 @@ class Dado {
 
     fun tiradaDoble (): Int {
         val num1 = Random.nextInt(numMin, numMax)
-        //println("num1 = $num1")
         val num2 = Random.nextInt(numMin, numMax)
-        //println("num2 = $num2")
         return num1 + num2
     }
 }
