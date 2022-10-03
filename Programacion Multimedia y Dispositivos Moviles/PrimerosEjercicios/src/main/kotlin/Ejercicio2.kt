@@ -1,37 +1,11 @@
-import kotlin.random.Random
-
-class Dado {
-    private var numMin = 1
-    private var numMax = 6
-
-    constructor()
-
-    constructor(numMin: Int, numMax: Int) {
-        this.numMin = numMin
-        this.numMax = numMax
-    }
-
-    fun tiradaUnica (): Int {
-        return Random.nextInt(numMin, numMax)
-    }
-}
-
-class Jugadores(private var numero: Int) {
-    var resultado = 0
-
-    override fun toString(): String {
-        return "Jugador $numero ha sacado $resultado"
-    }
-}
-
 fun main() {
     val dado1 = Dado()
     val dado2 = Dado(1,3)
     val dado3 = Dado(4,6)
 
-    val aJugadores = mutableListOf<Jugadores>()
+    val aJugadores = mutableListOf<Jugador>()
     repeat(100) {
-        aJugadores.add(Jugadores(it))
+        aJugadores.add(Jugador(it))
     }
 
     aJugadores.forEach {
@@ -45,6 +19,6 @@ fun main() {
     println(mostrarResultado(aJugadores))
 }
 
-fun mostrarResultado(lista : List<Jugadores>): String {
+fun mostrarResultado(lista : List<Jugador>): String {
     return lista.sortedByDescending { it.resultado }.toString()
 }

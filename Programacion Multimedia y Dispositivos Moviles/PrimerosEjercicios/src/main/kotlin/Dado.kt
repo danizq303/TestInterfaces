@@ -1,4 +1,3 @@
-/*
 import kotlin.random.Random
 
 class Dado {
@@ -15,15 +14,12 @@ class Dado {
     fun tiradaUnica (): Int {
         return Random.nextInt(numMin, numMax)
     }
-}
 
-class Jugadores(private var numero: Int) {
-    var resultado = 0
-
-    override fun toString(): String {
-        return "Jugador $numero ha sacado $resultado"
+    fun tiradaDoble (): Int {
+        val num1 = Random.nextInt(numMin, numMax)
+        //println("num1 = $num1")
+        val num2 = Random.nextInt(numMin, numMax)
+        //println("num2 = $num2")
+        return num1 + num2
     }
 }
-
-fun main() {
-}*/
