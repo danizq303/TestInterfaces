@@ -29,6 +29,6 @@ public class Clase07 {
 
         System.out.println(arrayList);
 
-        Collections.sort(arrayList,new Persona().nombre);
+        System.out.println(arrayList.contains(new Persona("Daniel",19)));
     }
 }
