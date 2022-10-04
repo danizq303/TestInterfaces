@@ -3,8 +3,11 @@ package Colecciones;
 import java.util.Objects;
 
 public class Persona {
-    private String nombre;
-    private int edad;
+    String nombre;
+    int edad;
+
+    public Persona() {
+    }
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;

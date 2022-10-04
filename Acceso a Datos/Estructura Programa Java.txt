@@ -377,16 +377,13 @@ Intefaz ListIterator (hereda de interator)
 	.nextIndex() obtiene el indice del elemento siguiente
 	.previousIndex()
 
-Interface Map almacenan pares de valores
-
-	isEmpty()
-
 Intefaz Map
 
 	(clave,valor)
 
 		clave almacenada mediante hash
 
+	.isEmpty()
 	.get(clave)
 	.put(clave,valor) | si existe la clave la sobrescribe y obtiene el valor antiguo
 	.remove(clave)
