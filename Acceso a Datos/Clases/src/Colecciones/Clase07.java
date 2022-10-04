@@ -29,6 +29,7 @@ public class Clase07 {
 
         System.out.println(arrayList);
 
+        //Devuelve true, ya que tenemos un metodo equals en la clase Persona
         System.out.println(arrayList.contains(new Persona("Daniel",19)));
     }
 }
