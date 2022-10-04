@@ -1,6 +1,6 @@
 import kotlin.random.Random
 
-class Dado {
+/*class Dado {
     private var numMin = 1
     private var numMax = 6
 
@@ -29,7 +29,7 @@ class Jugadores(var nombre : String) {
     override fun toString(): String {
         return "$nombre, kills=$kills, deaths=$deaths"
     }
-}
+}*/
 
 fun main() {
     println("Numero de partidas a realizar")
