@@ -6,15 +6,16 @@ fun main() {
     val rot = 13
 
     texto.forEach {
-        textoCifrado += abc[getRot(abc.indexOf(it), rot, abc)]
+        textoCifrado += abc[getNewIndex(abc.indexOf(it), rot, abc)]
     }
 
-    println(textoCifrado)
+    println("Texto plano: $texto")
+    println("Cifrado:     $textoCifrado")
 }
 
-fun getRot(index : Int, rot : Int, abc : String) : Int {
+fun getNewIndex(index : Int, rot : Int, abc : String) : Int {
     return if (index + rot >= abc.length)
-        abc.length + index - rot
+        index - rot
     else
         index + rot
 }
