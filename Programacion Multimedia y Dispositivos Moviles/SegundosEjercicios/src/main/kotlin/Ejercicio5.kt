@@ -1,12 +1,13 @@
 fun main() {
     var string = "987\n532\n667"
 
-    string = "98\n52\n67"
+    string = "98\n52\n67\n42"
     val aux = string.toCharArray()
 
     var row = 1
     var column = 0
 
+    //Ver tam Array
     for (c in aux) {
         if (c == '\n')
             row++
@@ -17,6 +18,7 @@ fun main() {
     var cont = 0
     val matriz = Array(row){CharArray(column)}
 
+    //Crear Array
     for (i in 0 until row) {
         for (j in 0 until column) {
             if (aux[cont] != '\n')
@@ -30,23 +32,60 @@ fun main() {
         }
     }
 
+    imprimirFilas(matriz,row,column)
+
+    println()
+
+    imprimirColumnas(matriz,row,column)
+}
+
+fun imprimirFilas(matriz: Array<CharArray>, row: Int, column: Int) {
     println("Filas:")
+
+
+    //Primera linea
+    print("    ")
+    for (i in 0 until column)
+        print(" ${i + 1} ")
+
+    println()
+    //segunda linea
+    print("   |")
+    for (i in 0 until column)
+        print("---")
+
+    println()
+
     for(i in 0 until row){
-        print("Fila ${i+1}: ")
+        print(" ${i+1} |")
         for(j in 0 until column){
-            print("${matriz[i][j]},")
+            print(" ${matriz[i][j]}")
             print(" ")
         }
         println()
     }
+}
+
+fun imprimirColumnas(matriz: Array<CharArray>, row: Int, column: Int) {
+    println("Columnas:")
+
+    //Primera linea
+    print("    ")
+    for (i in matriz.indices)
+        print(" ${i + 1} ")
+
+    println()
+    //segunda linea
+    print("   |")
+    for (i in matriz.indices)
+        print("---")
 
     println()
 
-    println("Columnas:")
     for(i in 0 until column){
-        print("Columna ${i+1}: ")
+        print(" ${i+1} |")
         for(j in 0 until row){
-            print("${matriz[j][i]},")
+            print(" ${matriz[j][i]}")
             print(" ")
         }
         println()
