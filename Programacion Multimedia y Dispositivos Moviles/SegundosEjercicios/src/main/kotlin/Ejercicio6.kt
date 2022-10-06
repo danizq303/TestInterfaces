@@ -14,7 +14,7 @@ fun main() {
 
 fun getRot(index : Int, rot : Int, abc : String) : Int {
     return if (index + rot >= abc.length)
-        abc.length - rot
+        abc.length + index - rot
     else
         index + rot
 }
