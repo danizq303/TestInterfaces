@@ -1,5 +1,5 @@
 fun main() {
-    var string = "987\n532\n667"
+    val string = "987\n532\n667"
     var string2 = "92\n2\n12"
 
     var matriz = ArrayList<ArrayList<Char>>()
@@ -7,8 +7,7 @@ fun main() {
     string.forEach {
         if (it == '\n') {
             matriz.add(aux)
-            for (c in aux)
-                aux.remove(c)
+            aux = ArrayList<Char>()
         } else
             aux.add(it)
     }
