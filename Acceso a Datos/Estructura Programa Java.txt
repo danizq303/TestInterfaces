@@ -467,6 +467,18 @@ Clase Character
 	.toLowerCase(car)
 	.toString(car)
 
+Clase File
+
+	File(String ruta)
+	Fiel(String diectorio, String nombre_fichero o nombre_directorio)
+	File(File directorio, String nombre_fichero o nombre_directorio)
+
+Clase FileWritter
+
+	.write(char)
+	.write(char[])
+	.write(String)
+	.append(char)
 
 Clases Abstractas
 
