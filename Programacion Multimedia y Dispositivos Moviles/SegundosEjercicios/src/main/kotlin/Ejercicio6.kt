@@ -19,4 +19,3 @@ fun getNewIndex(index : Int, rot : Int, abc : String) : Int {
     else
         index + rot
 }
-
