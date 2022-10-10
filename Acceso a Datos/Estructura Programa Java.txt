@@ -484,7 +484,16 @@ Clase FileReader
 
 	.read() devuelve -1 cuando llega a final de nombre_fichero
 
+Clase BufferedWriter
 
+	BufferedWriter bf = new BufferedWriter(new FileWritter(f))
+
+	.write(char)
+	.newLine()
+
+Clase BufferedReader
+
+	.readLine() devuelve null si es final de fichero
 
 Clases Abstractas
 
