@@ -21,6 +21,11 @@ public class Persona2 implements Comparable <Persona2>{
     public int compareTo(Persona2 o) {
         int r = 0;
 
-        return 0;
+        r = nombre.compareTo(o.nombre);
+
+        if (r==0)
+            r = edad - o.edad;
+
+        return r;
     }
 }

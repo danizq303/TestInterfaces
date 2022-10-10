@@ -480,6 +480,12 @@ Clase FileWritter
 	.write(String)
 	.append(char)
 
+Clase FileReader
+
+	.read() devuelve -1 cuando llega a final de nombre_fichero
+
+
+
 Clases Abstractas
 
 	-Al menos un metodo abstracto
