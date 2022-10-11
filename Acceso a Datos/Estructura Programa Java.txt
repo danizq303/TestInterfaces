@@ -496,6 +496,25 @@ Clase BufferedReader
 
 	.readLine() devuelve null si es final de fichero
 
+Clase FileOutputStream
+
+	.write()
+	
+
+Clase FileInputStream
+
+
+
+
+
+
+
+
+
+
+
+
+
 Clases Abstractas
 
 	-Al menos un metodo abstracto
