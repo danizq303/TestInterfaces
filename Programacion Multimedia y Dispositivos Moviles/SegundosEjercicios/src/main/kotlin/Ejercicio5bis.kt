@@ -1,78 +1,42 @@
 fun main() {
-    val string = "987\n532\n667"
-    var string2 = "92\n2\n12"
+    val string ="9 8\n" +
+            "5 2\n" +
+            "6 7\n" +
+            "4 2"
+    val aux = string.filter { it != ' ' }
 
-    var matriz = ArrayList<ArrayList<Char>>()
-    var aux = ArrayList<Char>()
-    string.forEach {
-        if (it == '\n') {
-            matriz.add(aux)
-            aux = ArrayList<Char>()
-        } else
-            aux.add(it)
-    }
+    imprimirFila(aux)
 
-    for (array in matriz)
-        for (c in array)
-            println(c)
+    println()
 
-    //imprimirFilas(matriz,row,column)
-
-    //println()
-
-    //imprimirColumnas(matriz,row,column)
+    imprimirColumna(aux)
 }
 
+fun getFila() {
+    
+}
 
-fun imprimirFilas(matriz: List<CharArray>, row: Int, column: Int) {
+fun imprimirFila(matriz: String) {
     println("Filas:")
 
-
-    //Primera linea
-    print("    ")
-    for (i in 0 until column)
-        print(" ${i + 1} ")
-
-    println()
-    //segunda linea
-    print("   |")
-    for (i in 0 until column)
-        print("---")
-
-    println()
-
-    for (i in 0 until row) {
-        print(" ${i + 1} |")
-        for (j in 0 until column) {
-            print(" ${matriz[i][j]}")
-            print(" ")
-        }
-        println()
-    }
-}
-
-fun imprimirColumnas(matriz: List<CharArray>, row: Int, column: Int) {
     println("Columnas:")
 
-    //Primera linea
-    print("    ")
-    for (i in matriz.indices)
-        print(" ${i + 1} ")
-
-    println()
-    //segunda linea
-    print("   |")
-    for (i in matriz.indices)
-        print("---")
-
-    println()
-
-    for (i in 0 until column) {
-        print(" ${i + 1} |")
-        for (j in 0 until row) {
-            print(" ${matriz[j][i]}")
-            print(" ")
-        }
-        println()
+    matriz.forEach {
+        if (it == '\n')
+            println()
+        else
+            print(" $it ")
     }
 }
+
+fun imprimirColumna(matriz: String) {
+    println("Columnas:")
+
+    matriz.forEach {
+        if (it == '\n')
+            println()
+        else
+            print(" $it ")
+    }
+}
+

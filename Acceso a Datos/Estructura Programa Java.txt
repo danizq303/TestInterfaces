@@ -306,7 +306,6 @@ Clase Arrays (java.utils.Arrays)
 
 Interface Set | cuando no queramos tener duplicados
 
-
 Clase HashSet (Hereda de Set y Collection)
 
 	omite los repetidos
@@ -395,6 +394,8 @@ Intefaz Map
 	.values() devuelve Collection con todos los valores
 	.isEmpty()
 	.clear()
+
+	HashMap | LinkedHashMap : Matinene orden de introduccion | TreeMap: ordena
 
 Clase GregorianCalendar (java.utils)
 

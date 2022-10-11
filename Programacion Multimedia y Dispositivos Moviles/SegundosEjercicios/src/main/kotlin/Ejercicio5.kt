@@ -1,8 +1,11 @@
 fun main() {
     var string = "987\n532\n667"
 
-    string = "98\n52\n67\n42"
-    val aux = string.toCharArray()
+    string ="9 8\n" +
+            "5 2\n" +
+            "6 7\n" +
+            "4 2"
+    val aux = string.filter { it != ' ' }.toCharArray()
 
     var row = 1
     var column = 0

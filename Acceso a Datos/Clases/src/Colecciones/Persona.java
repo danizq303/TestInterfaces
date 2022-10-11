@@ -14,9 +14,17 @@ public class Persona {
         this.edad = edad;
     }
 
-    public boolean equals(Object obj) {
+    /*public boolean equals(Object obj) {
         Persona p = (Persona) obj;
         return edad == p.edad && nombre.equals(p.nombre);
+    }*/
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Persona persona = (Persona) o;
+        return edad == persona.edad && Objects.equals(nombre, persona.nombre);
     }
 
     @Override

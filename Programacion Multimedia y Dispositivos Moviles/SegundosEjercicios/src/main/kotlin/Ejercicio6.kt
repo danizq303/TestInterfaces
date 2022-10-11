@@ -1,19 +1,24 @@
 fun main() {
-    val abc = "abcdefghijklmnopqrstuvwxyz"
-    val texto = "abcdefghijklmnopqrstuvwxyz"
-    var textoCifrado = ""
 
-    val rot = 13
-
-    texto.forEach {
-        textoCifrado += abc[getNewIndex(abc.indexOf(it), rot, abc)]
-    }
+    val texto = "Ser o no ser, esa es la cuestión."
+    val rot = 1
 
     println("Texto plano: $texto")
-    println("Cifrado:     $textoCifrado")
+    println("Cifrado:     ${cifradoRot(texto, rot)}")
 }
 
-fun getNewIndex(index : Int, rot : Int, abc : String) : Int {
+fun cifradoRot(texto: String, rot: Int): String {
+    val abc = "abcdefghijklmnñopqrstuvwxyz"
+    var textoCifrado = ""
+
+    texto.forEach {
+        if (it.isLetter()) textoCifrado += abc[getNewIndex(abc.indexOf(it.lowercase()), rot, abc)]
+    }
+
+    return textoCifrado
+}
+
+fun getNewIndex(index: Int, rot: Int, abc: String): Int {
     return if (index + rot >= abc.length)
         index - rot
     else

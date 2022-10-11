@@ -6,10 +6,11 @@ public class Clase06 {
     public static void main(String[] args) {
         HashMap<Integer, String> hashMap = new HashMap<>();
 
-        hashMap.put(1, "Pepe");
         hashMap.put(2, "Juanito");
+        hashMap.put(1, "Pepe");
         hashMap.put(7, "Pepe");
         hashMap.put(3,"Jacinto");
+        hashMap.put(4, "Alberto");
 
         imprimirMapa(hashMap);
 
@@ -17,10 +18,11 @@ public class Clase06 {
 
         LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<>();
 
-        linkedHashMap.put(1, "Pepe");
         linkedHashMap.put(2, "Juanito");
+        linkedHashMap.put(1, "Pepe");
         linkedHashMap.put(7, "Pepe");
         linkedHashMap.put(3, "Jacinto");
+        linkedHashMap.put(4, "Alberto");
 
         imprimirMapa(linkedHashMap);
 
@@ -28,10 +30,12 @@ public class Clase06 {
 
         TreeMap<Integer, String> integerStringTreeMap = new TreeMap<>();
 
-        integerStringTreeMap.put(1, "Pepe");
         integerStringTreeMap.put(2, "Juanito");
+        integerStringTreeMap.put(1, "Pepe");
         integerStringTreeMap.put(7, "Pepe");
+        integerStringTreeMap.put(4, "Alberto");
         integerStringTreeMap.put(3, "Jacinto");
+
 
         imprimirMapa(integerStringTreeMap);
     }

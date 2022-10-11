@@ -1,8 +1,6 @@
-import sys
-sys.path.append('./util/')
 import logging
 
-from logs_tools import logcfg
+from util import logcfg
 
 import requests
 import time

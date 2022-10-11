@@ -17,6 +17,7 @@ public class Clase09 {
         bW.close();
 
         BufferedReader bR = new BufferedReader(new FileReader(f));
+        //BufferedReader bR = new BufferedReader(new InputStreamReader(new FileInputStream(f), "ISO-8859-1"));
 
         String str;
         while ((str = bR.readLine()) != null)
