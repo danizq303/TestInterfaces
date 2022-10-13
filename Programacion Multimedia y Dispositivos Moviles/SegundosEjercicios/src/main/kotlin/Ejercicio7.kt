@@ -1,41 +1,47 @@
 class Personaje(var nombre: String, var perfil: String) {
-    var pesoMaxMochila = 10
+    private var pesoMaxMochila = 10
     var mochila = mutableListOf<Articulo>()
 
     fun robar(articulos: List<Articulo>) {
-        var pesoActualMochla = 0
-        var mejor = Articulo(0,0)
+        var pesoActualMochila = 0
+        val aRatios = mutableListOf<Float>()
 
-        //while (pesoActualMochla <= pesoMaxMochila) {
+        articulos.forEach { aRatios.add(it.valor.toFloat() / it.peso.toFloat()) }
+        aRatios.sortByDescending { it }
+
+        aRatios.forEach { ratio ->
             articulos.forEach {
-                if (it.valor > mejor.valor)
-                    if (it.peso <= pesoMaxMochila && pesoActualMochla <= pesoMaxMochila) {
+                if (it.valor.toFloat() / it.peso == ratio && pesoActualMochila <= pesoMaxMochila)
+                    if (pesoActualMochila + it.peso <= pesoMaxMochila) {
                         mochila.add(it)
-                        pesoActualMochla += it.peso
+                        pesoActualMochila += it.peso
                     }
             }
+        }
 
+        imprimirMochila(pesoActualMochila)
+    }
 
+    private fun imprimirMochila(pesoActual : Int) {
+        println("Mochila:")
+        mochila.forEach { println(it) }
+        println("TAM Actual: $pesoActual, TAM Maximo: $pesoMaxMochila")
     }
 
     override fun toString(): String {
-        return "Personaje(nombre='$nombre', perfil='$perfil', tamMochila=$pesoMaxMochila, mochila=$mochila)"
+        return "Personaje(nombre='$nombre', perfil='$perfil', mochila=$mochila)"
     }
 }
 
 class Articulo(var peso: Int, var valor: Int) {
-
     override fun toString(): String {
         return "peso=$peso, valor=$valor"
     }
 }
 
 fun main() {
-    var p1 = Personaje("Daniel", "Ladron")
-
-    val articulos = listOf<Articulo>(Articulo(5, 10), Articulo(4, 40), Articulo(6, 30), Articulo(4, 50))
+    val p1 = Personaje("Daniel", "Ladron")
+    val articulos = mutableListOf(Articulo(5, 10), Articulo(4, 40), Articulo(6, 30), Articulo(4, 50))
 
     p1.robar(articulos)
-
-    println(p1)
 }
