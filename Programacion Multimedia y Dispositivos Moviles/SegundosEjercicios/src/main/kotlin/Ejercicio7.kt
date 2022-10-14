@@ -1,4 +1,4 @@
-class Personaje(var nombre: String, var perfil: String) {
+class Personaje(var nombre: String, var clase: String) {
     private var pesoMaxMochila = 10
     var mochila = mutableListOf<Articulo>()
 
@@ -29,7 +29,7 @@ class Personaje(var nombre: String, var perfil: String) {
     }
 
     override fun toString(): String {
-        return "Personaje(nombre='$nombre', perfil='$perfil', mochila=$mochila)"
+        return "Personaje(nombre='$nombre', perfil='$clase', mochila=$mochila)"
     }
 }
 

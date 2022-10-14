@@ -1,7 +1,7 @@
 fun main() {
 
     val texto = "Ser o no ser, esa es la cuestión."
-    val rot = 1
+    val rot = 0
 
     println("Texto plano: $texto")
     println("Cifrado:     ${cifradoRot(texto, rot)}")
@@ -11,11 +11,14 @@ fun cifradoRot(texto: String, rot: Int): String {
     val abc = "abcdefghijklmnñopqrstuvwxyz"
     var textoCifrado = ""
 
-    texto.forEach {
-        if (it.isLetter()) textoCifrado += abc[getNewIndex(abc.indexOf(it.lowercase()), rot, abc)]
+    return if (rot == 0)
+        texto
+    else {
+        texto.forEach {
+            if (it.isLetter()) textoCifrado += abc[getNewIndex(abc.indexOf(it.lowercase()), rot, abc)]
+        }
+        textoCifrado
     }
-
-    return textoCifrado
 }
 
 fun getNewIndex(index: Int, rot: Int, abc: String): Int {
