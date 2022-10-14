@@ -499,20 +499,20 @@ Clase BufferedReader
 Clase FileOutputStream
 
 	.write()
-	
 
 Clase FileInputStream
 
+	.read()
 
+Clase DataOutputStream
 
+	.writeUTF(String)
+	.writeInt()
 
+Clase DataInputStream
 
-
-
-
-
-
-
+	.readUTF
+	.readInt
 
 
 Clases Abstractas
