@@ -1,16 +1,16 @@
 import random
 
-resultado = {
-    'moneda': {
-
-        'cara': {},
-
-        'cruz': {}
-
-    },
-
-    'dados': {}
-}
+# resultado = {
+#     'moneda': {
+#
+#         'cara': {},
+#
+#         'cruz': {}
+#
+#     },
+#
+#     'dados': {}
+# }
 
 cara = {}
 cruz = {}
@@ -37,7 +37,19 @@ for i in range(NUM_EXPERIMENTO):
         dado += num_random
 
     if cara.__contains__(caras):
-        cara.update([caras] + 1)
+        cara.update({caras: cara.get(caras) + 1})
+    else:
+        cara[caras] = caras
+
+    if cruz.__contains__(cruces):
+        cruz.update({cruces: cruz.get(cruces) + 1})
+    else:
+        cara[caras] = caras
+
+    if dados.__contains__(dado):
+        dados.update({dado: dados.get(dado) + 1})
+    else:
+        dados[dado] = dado
 
     # if resultado.get("moneda").get("cara").__contains__(caras):
     #     resultado.get("moneda").get("cara").update({caras: resultado.get("moneda").get("cara")[caras] + 1})
@@ -54,6 +66,10 @@ for i in range(NUM_EXPERIMENTO):
     # else:
     #     resultado.get("dados")[dado] = dado
 
-sorted_dict = dict(sorted(resultado.get("moneda").get("cara").items()))
+cara = dict(sorted(cara.items()))
+cruz = dict(sorted(cruz.items()))
+dados = dict(sorted(dados.items()))
+moneda = {cara, cruz}
+resultado = {moneda, dados}
 
-print(sorted_dict)
+print(resultado)
