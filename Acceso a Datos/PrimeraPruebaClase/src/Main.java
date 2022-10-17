@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Main {
@@ -27,7 +27,7 @@ public class Main {
         System.out.println();
 
         //TODO Lista de vuelos ordenado por vuelo
-        listaVuelos(vuelos);
+        listaVuelos(vuelos, true);
     }
 
     //TODO metodo para add vuelo (tiene que comprobar si el vuelo ya existe) | no tiene que imprimir nada por pantalla salvo error
@@ -51,28 +51,15 @@ public class Main {
     }
 
     //TODO metododo para listar los vuelos (num vuelo - minutos)
-    public static void listaVuelos(HashMap<String,Integer> vuelos) {
+    public static void listaVuelos(HashMap<String,Integer> vuelos, boolean op) {
         if (!vuelos.isEmpty()) {
-            final int TAM = vuelos.size();
+            ArrayList<String> claves = new ArrayList<>(vuelos.keySet());
 
-            String[] claves = new String[TAM];
-            int[] duracion = new int[TAM];
+            if (op)
+                Collections.sort(claves);
 
-            ArrayList<String> clavesA = new ArrayList<>(vuelos.keySet());
-            ArrayList<Integer> duracionA = new ArrayList<>(vuelos.values());
-
-            for (int i = 0; i < TAM; i++) {
-                claves[i] = clavesA.get(i);
-            }
-
-            for (int i = 0; i < TAM; i++)
-                duracion[i] = vuelos.get(claves[i]);
-
-            for (int i = 0; i < TAM; i++)
-                System.out.println(claves[i] + '-' + duracion[i] + "minutos");
-
-            for (int i = 0; i < TAM; i++)
-                System.out.println(clavesA.get(i) + '-' + duracionA.get(i) + "minutos");
+            for (String clave:claves)
+                System.out.println(clave + '-' + vuelos.get(clave));
         } else
             System.out.println("No hay vuelos registrados");
     }
