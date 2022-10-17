@@ -1,0 +1,46 @@
+1,6 Scanning
+
+1 connected
+2 original
+3 at / dpi
+4 preview
+5 adjust / brightness / contrast
+6 click
+7 text / OCR software
+8 file format
+9 image editing software
+10 all-in-one
+11 handheld
+12 flatbed
+13 high
+14 low
+
+1.7 Some useful adjectives
+1 - b
+2 - b
+3 - c
+4 - a
+5 - c
+6 - a
+7 - c
+8 - c
+9 - a
+10 - c
+11 - b
+12 - a
+13 - a
+14 - c
+15 - c
+16 - b
+
+1.8 Printing
+A: 
+1 cartridge, 2 replacement, 3 cover, 4 via, 5 out of / reload, 6 jammed, 7 feed, 8 out, 9 mono, 10 print-
+heads (or print nozzles), 11 double-sided (or two-sided), 12 collate, 13 portrait, 14 landscape
+
+B: 
+2 laser, 3 laser, 4 laser, 5 inkjet, 6 laser, 7 laser, 8 inkjet
+
+C: 
+1 T, 2 F (the colours are cyan, magenta, yellow and black), 3 T, 4 F (they're much slower than that), 5 F,
+6 T, 7 F, 8 T, 9 T, 10 F
