@@ -43,10 +43,6 @@ class Personaje(private var nombre: String, private var clase: String) {
         mochila.forEach { println(it) }
         println("TAM Actual: $pesoActual, TAM Maximo: $pesoMaxMochila, VALOR Actual $valor")
     }
-
-    override fun toString(): String {
-        return "Personaje(nombre='$nombre', perfil='$clase', mochila=$mochila)"
-    }
 }
 
 class Articulo {
@@ -61,7 +57,6 @@ fun main() {
     val p1 = Personaje("Daniel", "Ladron")
     val articulos = mutableListOf(Articulo(), Articulo(), Articulo(), Articulo())
 
-    articulos.sortByDescending { it.valor }
     articulos.forEach { print("| $it |") }
 
     println()
