@@ -9,7 +9,7 @@ def main():
     cruz = {}
     dados = {}
 
-    num_experimento = 100_000
+    num_experimento = 1_000_000
     num_tiradas_moneda = 10
     num_tiradas_dado = 3
 
