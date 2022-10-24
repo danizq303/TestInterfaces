@@ -1,8 +1,12 @@
 package Colecciones;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Persona {
+public class Persona implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     String nombre;
     int edad;
 
@@ -13,11 +17,6 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
     }
-
-    /*public boolean equals(Object obj) {
-        Persona p = (Persona) obj;
-        return edad == p.edad && nombre.equals(p.nombre);
-    }*/
 
     @Override
     public boolean equals(Object o) {

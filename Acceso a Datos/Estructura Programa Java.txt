@@ -520,6 +520,30 @@ Intefaz Serializable
 
 		.writeObject(obj)
 		.readObject(obj)
+
+Clase RandomAccessFile
+
+	(fichero, modo apertura {
+		r - lectura
+		rw - lectura/escritura
+	})
+
+	.writeUTF()
+	.writeInt()
+	.writeXXX()
+	.writeChar() ocupa 15
+
+	.readUTF()
+	.readInt()
+	.readXXX()
+	.seek(bytes)
+	.getFilePointer()
+
+	double 8
+	float 4
+	int 4
+	char 2
+	boolean 1
 		
 
 Clases Abstractas

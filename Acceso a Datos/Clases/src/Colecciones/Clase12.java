@@ -7,9 +7,7 @@ class MyObjectOutputStream extends ObjectOutputStream {
     }
 
     // Method of this class
-    protected void writeStreamHeader()
-    {
-    }
+    protected void writeStreamHeader() {}
 }
 public class Clase12 {
     public static void main(String[] args) throws IOException {
@@ -24,6 +22,8 @@ public class Clase12 {
         outputStream.writeObject("Primero");
         outputStream.writeObject("Segundo");
         outputStream.writeObject("Tercero");
+        Persona persona = new Persona("Daniel",19);
+        outputStream.writeObject(persona);
 
         outputStream.close();
 
