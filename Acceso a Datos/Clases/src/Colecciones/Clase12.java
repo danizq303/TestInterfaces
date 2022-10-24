@@ -2,37 +2,28 @@ package Colecciones;
 import java.io.*;
 
 class MyObjectOutputStream extends ObjectOutputStream {
-
-    // Constructor of this class
-    // 1. Default
-    MyObjectOutputStream() throws IOException
-    {
-
-        // Super keyword refers to parent class instance
-        super();
-    }
-
-    // Constructor of this class
-    // 1. Parameterized constructor
-    MyObjectOutputStream(OutputStream o) throws IOException
-    {
+    MyObjectOutputStream(OutputStream o) throws IOException {
         super(o);
     }
 
     // Method of this class
-    public void writeStreamHeader() throws IOException
+    protected void writeStreamHeader()
     {
-        return;
     }
 }
 public class Clase12 {
     public static void main(String[] args) throws IOException {
         File f = new File("C:\\prueba\\ficheroObj.bin");
+        ObjectOutputStream outputStream = null;
 
-        MyObjectOutputStream outputStream = new MyObjectOutputStream(new FileOutputStream(f,true));
+        if (f.exists())
+            outputStream = new MyObjectOutputStream(new FileOutputStream(f,true));
+        else
+            outputStream = new ObjectOutputStream(new FileOutputStream(f));
 
         outputStream.writeObject("Primero");
         outputStream.writeObject("Segundo");
+        outputStream.writeObject("Tercero");
 
         outputStream.close();
 
@@ -42,8 +33,10 @@ public class Clase12 {
 
             while (true)
                 System.out.println(inputStream.readObject());
+        } catch (EOFException e) {
+            System.out.println("Final de fichero");
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
         inputStream.close();
