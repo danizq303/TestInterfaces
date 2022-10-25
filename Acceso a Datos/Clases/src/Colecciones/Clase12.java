@@ -6,13 +6,12 @@ class MyObjectOutputStream extends ObjectOutputStream {
         super(o);
     }
 
-    // Method of this class
     protected void writeStreamHeader() {}
 }
 public class Clase12 {
     public static void main(String[] args) throws IOException {
         File f = new File("C:\\prueba\\ficheroObj.bin");
-        ObjectOutputStream outputStream = null;
+        ObjectOutputStream outputStream;
 
         if (f.exists())
             outputStream = new MyObjectOutputStream(new FileOutputStream(f,true));
