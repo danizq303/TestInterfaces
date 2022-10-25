@@ -23,6 +23,6 @@ public class Clase09 {
         while ((str = bR.readLine()) != null)
             System.out.println(str);
 
-        bW.close();
+        bR.close();
     }
 }
