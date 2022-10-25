@@ -32,6 +32,11 @@ public class Clase13 {
             System.out.println(e.getMessage());
         }
 
+        //Leer segundo dato
+        randomAccessFile.seek(0);
+        randomAccessFile.seek(randomAccessFile.getFilePointer() + 15);
+        System.out.println(randomAccessFile.readUTF() + ' ' + randomAccessFile.readInt());
+
         randomAccessFile.close();
     }
 }
