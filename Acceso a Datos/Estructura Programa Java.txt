@@ -544,6 +544,10 @@ Clase RandomAccessFile
 	int 4
 	char 2
 	boolean 1
+
+	Clase StringBuffer
+
+		.setLength(num)
 		
 
 Clases Abstractas
