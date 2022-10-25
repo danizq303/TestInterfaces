@@ -59,9 +59,8 @@ public class Clase14 {
             System.out.println(e.getMessage());
         }
 
-
-        randomAccessFile.seek(0);
-        randomAccessFile.seek((TAMSTRING + TAMINT + 2));
+        //Posicionarse en el registro 3 e imprimirlo para ver que, efectivamente nos estamos situando bien.
+        randomAccessFile.seek(2 * (TAMSTRING + TAMINT + 2));
 
         try {
             while (true)
