@@ -16,8 +16,9 @@ class SaludoActivity : AppCompatActivity() {
         //Obtenemos una referencia a los controles de la interfaz
         txtSaludo = findViewById(R.id.txtSaludo)
         //Recuperamos la información pasada en el intent
-        val saludo = intent.getStringExtra("NOMBRE")
+        val nombre = intent.getStringExtra("NOMBRE")
+        val pass = intent.getStringExtra("PASS")
         //Construimos el mensaje a mostrar
-        txtSaludo.text = "Hola $saludo"
+        txtSaludo.text = "Hola $nombre, tu password es $pass"
     }
 }
