@@ -1,0 +1,7 @@
+[2022-10-26 09:55:14,666] DEBUG    MainThread   - Configuración de debug: {'version': 1, 'formatters': {'standard': {'comment_format': '[%(asctime)s] %(levelname)-8s %(name)-12s %(threadName)-12s - %(message)s', 'format': '[%(asctime)s] %(levelname)-8s %(threadName)-12s - %(message)s'}}, 'handlers': {'file': {'level': 'DEBUG', 'class': 'logging.FileHandler', 'formatter': 'standard', 'encoding': 'utf-8', 'filename': 'C:\\Users\\AlumnoM\\Documents\\DAM2\\SGE\\Desarrollo\\SGE-UD05-Funciones\\saludando.log'}, 'stream': {'level': 'INFO', 'class': 'logging.StreamHandler', 'formatter': 'standard'}}, 'loggers': {'': {'handlers': ['file', 'stream'], 'level': 'DEBUG'}}}
+[2022-10-26 09:55:14,666] DEBUG    MainThread   - Iniciando
+[2022-10-26 09:55:14,666] INFO     MainThread   - Hola, Juan
+[2022-10-26 09:55:14,666] INFO     MainThread   - Hola, Pedro
+[2022-10-26 09:55:14,667] INFO     MainThread   - Hola, Ana
+[2022-10-26 09:55:14,667] INFO     MainThread   - 15
+[2022-10-26 09:55:14,667] DEBUG    MainThread   - Finalizando
