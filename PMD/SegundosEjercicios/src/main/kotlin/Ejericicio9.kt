@@ -1,15 +1,56 @@
-class Personaje2 {
+import kotlin.random.Random
+
+class Dado {
+    private var numMin = 0
+    private var numMax = 10
+
+    fun darValores(valMin: Int, valMax: Int) {
+        if (valMin <= valMax) {
+            numMax = valMax
+            numMin = valMin
+        } else {
+            println("Se han cambiado los valores min y maximo")
+            numMax = valMin
+            numMin = valMax
+        }
+    }
+
+    fun tiradaUnica(): Int {
+        return Random.nextInt(numMin, numMax)
+    }
+
+    fun tiradaDoble(): Int {
+        val num1 = Random.nextInt(numMin, numMax)
+        println("num1 = $num1")
+        val num2 = Random.nextInt(numMin, numMax)
+        println("num2 = $num2")
+        return if (num1 == num2) num1 * num2 else num1 + num2
+    }
+}
+
+class Articulo2 {
+    var peso: Int = Random.nextInt(1, 20)
+    var valor: Int = Random.nextInt(10, 60)
+    override fun toString(): String {
+        return "peso=$peso, valor=$valor"
+    }
+}
+
+class Personaje3 {
     var nombre = ""
     var raza = ""
     var clase = ""
     var estadoVital = ""
+    var coins = 0
 
-    private var pesoMaxMochila = 10
+    private var pesoMaxMochila = Dado().tiradaUnica() * 10
     private var mochila = mutableListOf<Articulo>()
 
     var razas = listOf("Elfo", "Humano", "Enano", "Goblin")
-    var clases = listOf("Mago", "Ladron", "Guerrero", "Berseker")
+    var clases = listOf("Mago", "Ladron", "Guerrero", "Berseker", "Mercader")
     var estadosVitales = listOf("Joven", "Adulto", "Anciano")
+
+    private var puermaCoins = listOf(1, 5, 10, 25, 100)
 
     fun robar(articulos: List<Articulo>) {
         var pesoActualMochila = 0
@@ -42,10 +83,49 @@ class Personaje2 {
             }
         }
 
-        imprimirMochila(pesoActualMochila,valor)
+        imprimirMochila(pesoActualMochila, valor)
     }
 
-    private fun imprimirMochila(pesoActual: Int,valor : Int) {
+    fun tradear(mercader: Personaje3, articulos: List<Articulo>) {
+        if (clase == clases[4]) {
+            println("Cuantos Articulos deseas tradear (1 - Uno, 2 - Varios)")
+            val num = readln().toInt()
+
+            if (num == 1) elegriArticulo(articulos, mercader)
+            else if (num == 2) {
+                elegriArticulo(articulos, mercader)
+
+                println("Quieres seguir tradando? (1 - Si, 2 - No)")
+                val seguir = readln().toInt()
+
+                if (seguir == 1) tradear(mercader, articulos)
+            }
+        } else 
+            println("No puedes tradear")
+    }
+
+    fun elegriArticulo(articulos: List<Articulo>, mercader: Personaje3) {
+        println("Elige uno de estos articulos: $articulos")
+        val art = readln().toInt()
+
+        val articulo = articulos[art]
+        val valor = articulo.valor
+
+        coins = darDinero(valor)
+        mercader.mochila.add(articulo)
+    }
+
+    fun darDinero(valor: Int): Int {
+        var dineroADar = 0
+
+        while (dineroADar < valor)
+            puermaCoins.sortedDescending().forEach {
+                if (it <= valor)
+                    dineroADar += it
+            }
+    }
+
+    private fun imprimirMochila(pesoActual: Int, valor: Int) {
         println("Mochila:")
         mochila.forEach { println(it) }
         println("TAM Actual: $pesoActual, TAM Maximo: $pesoMaxMochila, VALOR Actual $valor")
@@ -135,38 +215,11 @@ class Personaje2 {
 }
 
 fun main() {
-    val personaje = Personaje2()
+    val articulos = mutableListOf(Articulo(), Articulo(), Articulo(), Articulo(), Articulo(), Articulo())
+    val personaje = Personaje3()
 
-    crearPersonaje(personaje)
-    println("Tu personaje es: $personaje")
+    personaje.robar(articulos)
 
-    println("Pregunta a tu personaje, para dejar de hablar con tu personaje escribe 'Salir'")
-    var pregunta = readln()
-    while (pregunta != "Salir") {
-        personaje.hablar(pregunta)
-        println("Pregunta a tu personaje, para dejar de hablar con tu personaje escribe 'Salir'")
-        pregunta = readln()
-    }
 
-    println("Fin del programa")
-}
-
-fun crearPersonaje(personaje: Personaje2) {
-    println("Introducte su nombre:")
-    personaje.nombre = readLine()!!
-
-    do {
-        println("Introducte su raza ${personaje.razas}:")
-        personaje.raza = readLine()!!
-    } while (personaje.raza !in personaje.razas)
-
-    do {
-        println("Introducte su clase: ${personaje.clases}")
-        personaje.clase = readLine()!!
-    } while (personaje.clase !in personaje.clases)
-
-    do {
-        println("Introducte su estado vital: ${personaje.estadosVitales}")
-        personaje.estadoVital = readLine()!!
-    } while (personaje.estadoVital !in personaje.estadosVitales)
+    println()
 }
