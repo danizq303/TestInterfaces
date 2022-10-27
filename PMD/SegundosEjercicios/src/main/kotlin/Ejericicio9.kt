@@ -44,7 +44,7 @@ class Personaje3 {
     var coins = 0
 
     private var pesoMaxMochila = Dado().tiradaUnica() * 10
-    private var mochila = mutableListOf<Articulo>()
+    private var mochila = mutableListOf<Articulo2>()
 
     var razas = listOf("Elfo", "Humano", "Enano", "Goblin")
     var clases = listOf("Mago", "Ladron", "Guerrero", "Berseker", "Mercader")
@@ -52,7 +52,7 @@ class Personaje3 {
 
     private var puermaCoins = listOf(1, 5, 10, 25, 100)
 
-    fun robar(articulos: List<Articulo>) {
+    fun robar(articulos: List<Articulo2>) {
         var pesoActualMochila = 0
         val aRatios = mutableListOf<Float>()
         var valor = 0
@@ -86,10 +86,14 @@ class Personaje3 {
         imprimirMochila(pesoActualMochila, valor)
     }
 
-    fun tradear(mercader: Personaje3, articulos: List<Articulo>) {
+    fun tradear(mercader: Personaje3, articulos: List<Articulo2>) {
         if (clase == clases[4]) {
-            println("Cuantos Articulos deseas tradear (1 - Uno, 2 - Varios)")
-            val num = readln().toInt()
+            var num = 0
+
+            do {
+                println("Cuantos Articulos deseas tradear (1 - Uno, 2 - Varios)")
+                num = readln().toInt()
+            } while (num != 1 && num != 2)
 
             if (num == 1) elegriArticulo(articulos, mercader)
             else if (num == 2) {
@@ -100,11 +104,11 @@ class Personaje3 {
 
                 if (seguir == 1) tradear(mercader, articulos)
             }
-        } else 
-            println("No puedes tradear")
+        } else
+            println("No puedes tradear con un no mercader")
     }
 
-    fun elegriArticulo(articulos: List<Articulo>, mercader: Personaje3) {
+    fun elegriArticulo(articulos: List<Articulo2>, mercader: Personaje3) {
         println("Elige uno de estos articulos: $articulos")
         val art = readln().toInt()
 
@@ -123,6 +127,8 @@ class Personaje3 {
                 if (it <= valor)
                     dineroADar += it
             }
+
+        return dineroADar
     }
 
     private fun imprimirMochila(pesoActual: Int, valor: Int) {
@@ -215,11 +221,34 @@ class Personaje3 {
 }
 
 fun main() {
-    val articulos = mutableListOf(Articulo(), Articulo(), Articulo(), Articulo(), Articulo(), Articulo())
+    val articulos = mutableListOf(Articulo2(), Articulo2(), Articulo2(), Articulo2(), Articulo2(), Articulo2())
+
     val personaje = Personaje3()
+    crearPersonaje(personaje)
+
+    val mercader = Personaje3()
+    crearPersonaje(mercader)
 
     personaje.robar(articulos)
+    personaje.tradear(mercader, articulos)
+}
 
+fun crearPersonaje(personaje: Personaje3) {
+    println("Introducte su nombre:")
+    personaje.nombre = readLine()!!
 
-    println()
+    do {
+        println("Introducte su raza ${personaje.razas}:")
+        personaje.raza = readLine()!!
+    } while (personaje.raza !in personaje.razas)
+
+    do {
+        println("Introducte su clase: ${personaje.clases}")
+        personaje.clase = readLine()!!
+    } while (personaje.clase !in personaje.clases)
+
+    do {
+        println("Introducte su estado vital: ${personaje.estadosVitales}")
+        personaje.estadoVital = readLine()!!
+    } while (personaje.estadoVital !in personaje.estadosVitales)
 }
