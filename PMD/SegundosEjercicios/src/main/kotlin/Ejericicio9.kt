@@ -87,8 +87,8 @@ class Personaje3 {
     }
 
     fun tradear(mercader: Personaje3, articulos: List<Articulo2>) {
-        if (clase == clases[4]) {
-            var num = 0
+        if (mercader.clase == clases[4]) {
+            var num: Int
 
             do {
                 println("Cuantos Articulos deseas tradear (1 - Uno, 2 - Varios)")
@@ -231,6 +231,8 @@ fun main() {
 
     personaje.robar(articulos)
     personaje.tradear(mercader, articulos)
+
+    println(personaje.coins)
 }
 
 fun crearPersonaje(personaje: Personaje3) {
