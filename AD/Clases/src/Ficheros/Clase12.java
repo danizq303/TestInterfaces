@@ -1,4 +1,6 @@
-package Colecciones;
+package Ficheros;
+import Colecciones.Persona;
+
 import java.io.*;
 
 class MyObjectOutputStream extends ObjectOutputStream {

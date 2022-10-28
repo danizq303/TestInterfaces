@@ -3,4 +3,5 @@
     <string name="nombre">Introduce tu nombre</string>
     <string name="aceptar">Aceptar</string>
     <string name="password">Password</string>
+    <string name="mostrarImagen">Mostrar Imagen</string>
 </resources>

@@ -537,6 +537,8 @@ Clase RandomAccessFile
 	.readInt()
 	.readXXX()
 	.seek(bytes)
+	.length()
+	.skipBytes()
 	.getFilePointer()
 
 	double 8

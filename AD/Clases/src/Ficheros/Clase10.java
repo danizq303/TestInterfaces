@@ -1,4 +1,4 @@
-package Colecciones;
+package Ficheros;
 
 import java.io.*;
 
