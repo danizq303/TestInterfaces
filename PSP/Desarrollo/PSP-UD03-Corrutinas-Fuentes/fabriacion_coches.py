@@ -37,11 +37,11 @@ async def tarea_fabrica(entrada_fabrica, salida_fabrica):
             chasis += 1
         elif item == "motor":
             motor += 1
-        if ruedas >= 4 and chasis >= 1 and motor >= 1:
+        if ruedas >= 1 and chasis >= 1 and motor >= 1:
             await asyncio.sleep(random.random())
             logging.info("Coche fabricado")
             await salida_fabrica.put("coche")
-            ruedas -= 4
+            ruedas -= 1
             chasis -= 1
             motor -= 1
 
