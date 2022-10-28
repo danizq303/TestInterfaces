@@ -2268,3 +2268,9 @@
 [2022-10-28 13:52:49,105] INFO     MainThread   - Chasis fabricado
 [2022-10-28 13:52:49,190] INFO     MainThread   - Ruedas fabricadas
 [2022-10-28 13:52:49,575] INFO     MainThread   - Coche fabricado
+[2022-10-28 13:52:57,563] DEBUG    MainThread   - Configuración de debug: {'version': 1, 'formatters': {'standard': {'comment_format': '[%(asctime)s] %(levelname)-8s %(name)-12s %(threadName)-12s - %(message)s', 'format': '[%(asctime)s] %(levelname)-8s %(threadName)-12s - %(message)s'}}, 'handlers': {'file': {'filename': 'C:\\Users\\AlumnoM\\Documents\\DAM2\\PSP\\Desarrollo\\PSP-UD03-Corrutinas-Fuentes\\fabriacion_coches.log', 'level': 'DEBUG', 'class': 'logging.FileHandler', 'formatter': 'standard'}, 'stream': {'level': 'INFO', 'class': 'logging.StreamHandler', 'formatter': 'standard'}}, 'loggers': {'': {'handlers': ['file', 'stream'], 'level': 'DEBUG'}}}
+[2022-10-28 13:52:57,610] INFO     MainThread   - Motor fabricado
+[2022-10-28 13:52:58,281] INFO     MainThread   - Ruedas fabricadas
+[2022-10-28 13:52:58,481] INFO     MainThread   - Motor fabricado
+[2022-10-28 13:52:58,559] INFO     MainThread   - Chasis fabricado
+[2022-10-28 13:52:58,597] INFO     MainThread   - Coche fabricado
