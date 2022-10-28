@@ -59,18 +59,14 @@ async def main():
 
     entrada_fabrica = asyncio.Queue()
     salida_fabrica = asyncio.Queue()
-    await asyncio.gather(
-        tarea_fabrica_ruedas(entrada_fabrica),
-        tarea_fabrica_chasis(entrada_fabrica),
-        tarea_fabrica_motor(entrada_fabrica),
-        tarea_fabrica(entrada_fabrica, salida_fabrica),
-        tarea_concesionario(salida_fabrica),
-    )
-    await asyncio.sleep(30)
-    logging.info("Cancelando tareas")
-    for task in asyncio.all_tasks():
-        task.cancel()
+
+    tasks = [tarea_fabrica_ruedas(entrada_fabrica), tarea_fabrica_chasis(entrada_fabrica),
+             tarea_fabrica_motor(entrada_fabrica), tarea_fabrica(entrada_fabrica, salida_fabrica),
+             tarea_concesionario(salida_fabrica)]
+    await asyncio.wait(tasks, timeout=30)
 
 
 if __name__ == "__main__":
+    logging.info("Inicio")
     asyncio.run(main())
+    logging.info("Fin")
