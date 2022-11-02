@@ -179,3 +179,7 @@ En el activity_saludo.xml tenemos un TextView el cual muestra el los datos pasad
 Captura de la aplicación
 
 ![](1.png)
+
+## Link al repositorio de GitHub
+
+https://github.com/danizq303/AppSencilla
