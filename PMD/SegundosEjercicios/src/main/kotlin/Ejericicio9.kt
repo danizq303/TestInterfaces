@@ -130,22 +130,7 @@ class Personaje3 {
         } else
             println("No puedes tradear con un no mercader")
     }
-
-    private fun elegriArticulo(articulos: List<Articulo2>, mercader: Personaje3) {
-        /*println("Elige uno de estos articulos: $articulos")
-        val art = readln().toInt()
-
-        val articulo = articulos[art]
-        var aux = articulos
-        val valor = articulo.valor
-
-        println(articulo)
-        darDinero(valor)
-        mercader.mochila.add(articulo)
-        aux.filter { it != articulo }
-        println("Articulos: $aux")*/
-    }
-
+    
     private fun darDinero(articulosVender: List<Articulo2>) {
         var dineroADar: Int
 
