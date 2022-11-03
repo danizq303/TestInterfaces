@@ -107,7 +107,7 @@ class Personaje3 {
                 println("Que articulo deseas vender")
                 articulos.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
                 articulosVender.add(articulos[readln().toInt()])
-            } else if (num == 2) {
+            } else {
                 //TODO primero seleccionar los articulos a vender y luego dar el valor
 
                 println("Cuantos articulos deseas vender (MAX:${articulos.size})")
