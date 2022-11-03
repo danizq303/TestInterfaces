@@ -264,7 +264,7 @@ fun main() {
     personaje.tradear(mercader, articulos)
 
     println("Monedas: ${personaje.coins}")
-    println("Articulos vendidos: ${mercader.mochila}")
+    println("Articulos del Mercader: ${mercader.mochila}")
     println("Articulos restantes: ${personaje.art}")
 }
 
