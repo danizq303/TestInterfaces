@@ -91,36 +91,45 @@ class Personaje3 {
     }
 
     fun tradear(mercader: Personaje3, articulos: List<Articulo2>) {
+        val art = mutableListOf<Articulo2>()
+        articulos.forEach { art.add(it) }
+
         if (mercader.clase == clases[4]) {
             var num: Int
+            val articulosVender = mutableListOf<Articulo2>()
 
             do {
                 println("Cuantos Articulos deseas tradear (1 - Uno, 2 - Varios)")
                 num = readln().toInt()
             } while (num != 1 && num != 2)
 
-            if (num == 1) elegriArticulo(articulos, mercader)
-            else if (num == 2) {
+            if (num == 1) {
+                println("Que articulo deseas vender")
+                articulos.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
+                articulosVender.add(articulos[readln().toInt()])
+            } else if (num == 2) {
                 //TODO primero seleccionar los articulos a vender y luego dar el valor
 
-                elegriArticulo(articulos, mercader)
+                println("Cuantos articulos deseas vender (MAX:${articulos.size})")
+                var numArticulos = readln().toInt()
 
-                println("Quieres seguir tradando? (1 - Si, 2 - No)")
-                var seguir = readln().toInt()
-
-                while (seguir == 1) {
-                    elegriArticulo(articulos, mercader)
-                    println("Quieres seguir tradando? (1 - Si, 2 - No)")
-                    seguir = readln().toInt()
+                while (numArticulos > 0) {
+                    println("Que articulo deseas vender")
+                    art.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
+                    val i = readln().toInt()
+                    articulosVender.add(art[i])
+                    art.removeAll { it == art[i] }
+                    numArticulos--
                 }
-
             }
+
+            darDinero(articulosVender)
         } else
             println("No puedes tradear con un no mercader")
     }
 
     private fun elegriArticulo(articulos: List<Articulo2>, mercader: Personaje3) {
-        println("Elige uno de estos articulos: $articulos")
+        /*println("Elige uno de estos articulos: $articulos")
         val art = readln().toInt()
 
         val articulo = articulos[art]
@@ -131,16 +140,19 @@ class Personaje3 {
         darDinero(valor)
         mercader.mochila.add(articulo)
         aux.filter { it != articulo }
-        println("Articulos: $aux")
+        println("Articulos: $aux")*/
     }
 
-    private fun darDinero(valor: Int) {
+    private fun darDinero(articulosVender: List<Articulo2>) {
         var dineroADar = 0
 
-        puermaCoins.sortedDescending().forEach {moneda ->
-            while (dineroADar <= valor && valor - dineroADar >= moneda) {
-                coins[moneda] = coins[moneda]!! + 1
-                dineroADar += moneda
+        articulosVender.forEach {art ->
+            dineroADar = 0
+            puermaCoins.sortedDescending().forEach {moneda ->
+                while (dineroADar <= art.valor && art.valor - dineroADar >= moneda) {
+                    coins[moneda] = coins[moneda]!! + 1
+                    dineroADar += moneda
+                }
             }
         }
     }
@@ -249,6 +261,7 @@ fun main() {
     personaje.tradear(mercader, articulos)
 
     println("Monedas: ${personaje.coins}")
+    //println("Total: ${personaje.coins.values.sum()}")
 }
 
 fun crearPersonaje(personaje: Personaje3) {
