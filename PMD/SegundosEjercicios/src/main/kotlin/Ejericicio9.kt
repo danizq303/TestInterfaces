@@ -30,7 +30,7 @@ class Dado {
 
 class Articulo2 {
     var peso: Int = Random.nextInt(1, 20)
-    var valor: Int = Random.nextInt(10, 60)
+    var valor: Int = Random.nextInt(10, 120)
     override fun toString(): String {
         return "| peso=$peso, valor=$valor |"
     }
@@ -42,9 +42,10 @@ class Personaje3 {
     var clase = ""
     var estadoVital = ""
     var coins = mutableMapOf<Int, Int>()
+    var art = mutableListOf<Articulo2>()
 
     private var pesoMaxMochila = Dado().tiradaUnica() * 10
-    private var mochila = mutableListOf<Articulo2>()
+    var mochila = mutableListOf<Articulo2>()
 
     var razas = listOf("Elfo", "Humano", "Enano", "Goblin")
     var clases = listOf("Mago", "Ladron", "Guerrero", "Berseker", "Mercader")
@@ -91,7 +92,6 @@ class Personaje3 {
     }
 
     fun tradear(mercader: Personaje3, articulos: List<Articulo2>) {
-        val art = mutableListOf<Articulo2>()
         articulos.forEach { art.add(it) }
 
         if (mercader.clase == clases[4]) {
@@ -117,8 +117,11 @@ class Personaje3 {
                     println("Que articulo deseas vender")
                     art.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
                     val i = readln().toInt()
+
                     articulosVender.add(art[i])
                     art.removeAll { it == art[i] }
+                    mercader.mochila.add(articulosVender.last())
+
                     numArticulos--
                 }
             }
@@ -144,7 +147,7 @@ class Personaje3 {
     }
 
     private fun darDinero(articulosVender: List<Articulo2>) {
-        var dineroADar = 0
+        var dineroADar: Int
 
         articulosVender.forEach {art ->
             dineroADar = 0
@@ -261,7 +264,8 @@ fun main() {
     personaje.tradear(mercader, articulos)
 
     println("Monedas: ${personaje.coins}")
-    //println("Total: ${personaje.coins.values.sum()}")
+    println("Articulos vendidos: ${mercader.mochila}")
+    println("Articulos restantes: ${personaje.art}")
 }
 
 fun crearPersonaje(personaje: Personaje3) {
