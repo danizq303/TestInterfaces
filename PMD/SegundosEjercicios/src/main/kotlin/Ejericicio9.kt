@@ -32,7 +32,7 @@ class Articulo2 {
     var peso: Int = Random.nextInt(1, 20)
     var valor: Int = Random.nextInt(10, 60)
     override fun toString(): String {
-        return "peso=$peso, valor=$valor"
+        return "| peso=$peso, valor=$valor |"
     }
 }
 
@@ -41,7 +41,7 @@ class Personaje3 {
     var raza = ""
     var clase = ""
     var estadoVital = ""
-    var coins = 0
+    var coins = mutableMapOf<Int, Int>()
 
     private var pesoMaxMochila = Dado().tiradaUnica() * 10
     private var mochila = mutableListOf<Articulo2>()
@@ -51,6 +51,10 @@ class Personaje3 {
     var estadosVitales = listOf("Joven", "Adulto", "Anciano")
 
     private var puermaCoins = listOf(1, 5, 10, 25, 100)
+
+    init {
+        puermaCoins.forEach { coins[it] = 0 }
+    }
 
     fun robar(articulos: List<Articulo2>) {
         var pesoActualMochila = 0
@@ -97,38 +101,48 @@ class Personaje3 {
 
             if (num == 1) elegriArticulo(articulos, mercader)
             else if (num == 2) {
+                //TODO primero seleccionar los articulos a vender y luego dar el valor
+
                 elegriArticulo(articulos, mercader)
 
                 println("Quieres seguir tradando? (1 - Si, 2 - No)")
-                val seguir = readln().toInt()
+                var seguir = readln().toInt()
 
-                if (seguir == 1) tradear(mercader, articulos)
+                while (seguir == 1) {
+                    elegriArticulo(articulos, mercader)
+                    println("Quieres seguir tradando? (1 - Si, 2 - No)")
+                    seguir = readln().toInt()
+                }
+
             }
         } else
             println("No puedes tradear con un no mercader")
     }
 
-    fun elegriArticulo(articulos: List<Articulo2>, mercader: Personaje3) {
+    private fun elegriArticulo(articulos: List<Articulo2>, mercader: Personaje3) {
         println("Elige uno de estos articulos: $articulos")
         val art = readln().toInt()
 
         val articulo = articulos[art]
+        var aux = articulos
         val valor = articulo.valor
 
-        coins = darDinero(valor)
+        println(articulo)
+        darDinero(valor)
         mercader.mochila.add(articulo)
+        aux.filter { it != articulo }
+        println("Articulos: $aux")
     }
 
-    fun darDinero(valor: Int): Int {
+    private fun darDinero(valor: Int) {
         var dineroADar = 0
 
-        while (dineroADar < valor)
-            puermaCoins.sortedDescending().forEach {
-                if (it <= valor)
-                    dineroADar += it
+        puermaCoins.sortedDescending().forEach {moneda ->
+            while (dineroADar <= valor && valor - dineroADar >= moneda) {
+                coins[moneda] = coins[moneda]!! + 1
+                dineroADar += moneda
             }
-
-        return dineroADar
+        }
     }
 
     private fun imprimirMochila(pesoActual: Int, valor: Int) {
@@ -223,16 +237,18 @@ class Personaje3 {
 fun main() {
     val articulos = mutableListOf(Articulo2(), Articulo2(), Articulo2(), Articulo2(), Articulo2(), Articulo2())
 
-    val personaje = Personaje3()
-    crearPersonaje(personaje)
+    val personaje = defaultPersonaje()
+    //crearPersonaje(personaje)
 
-    val mercader = Personaje3()
-    crearPersonaje(mercader)
+    val mercader = defaultMercader()
+    //crearPersonaje(mercader)
 
-    personaje.robar(articulos)
+    println("Monedas p1: ${personaje.coins}")
+
+    //personaje.robar(articulos)
     personaje.tradear(mercader, articulos)
 
-    println(personaje.coins)
+    println("Monedas: ${personaje.coins}")
 }
 
 fun crearPersonaje(personaje: Personaje3) {
@@ -253,4 +269,24 @@ fun crearPersonaje(personaje: Personaje3) {
         println("Introducte su estado vital: ${personaje.estadosVitales}")
         personaje.estadoVital = readLine()!!
     } while (personaje.estadoVital !in personaje.estadosVitales)
+}
+
+fun defaultPersonaje(): Personaje3 {
+    val personaje = Personaje3()
+    personaje.nombre = "Daniel"
+    personaje.raza = "Humano"
+    personaje.clase = "Mago"
+    personaje.estadoVital = "Joven"
+
+    return personaje
+}
+
+fun defaultMercader(): Personaje3 {
+    val personaje = Personaje3()
+    personaje.nombre = "Merca"
+    personaje.raza = "Humano"
+    personaje.clase = "Mercader"
+    personaje.estadoVital = "Joven"
+
+    return personaje
 }
