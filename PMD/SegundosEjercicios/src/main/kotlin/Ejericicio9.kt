@@ -130,7 +130,7 @@ class Personaje3 {
         } else
             println("No puedes tradear con un no mercader")
     }
-    
+
     private fun darDinero(articulosVender: List<Articulo2>) {
         var dineroADar: Int
 
