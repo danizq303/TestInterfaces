@@ -108,8 +108,6 @@ class Personaje3 {
                 articulos.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
                 articulosVender.add(articulos[readln().toInt()])
             } else {
-                //TODO primero seleccionar los articulos a vender y luego dar el valor
-
                 println("Cuantos articulos deseas vender (MAX:${articulos.size})")
                 var numArticulos = readln().toInt()
 
@@ -134,9 +132,9 @@ class Personaje3 {
     private fun darDinero(articulosVender: List<Articulo2>) {
         var dineroADar: Int
 
-        articulosVender.forEach {art ->
+        articulosVender.forEach { art ->
             dineroADar = 0
-            puermaCoins.sortedDescending().forEach {moneda ->
+            puermaCoins.sortedDescending().forEach { moneda ->
                 while (dineroADar <= art.valor && art.valor - dineroADar >= moneda) {
                     coins[moneda] = coins[moneda]!! + 1
                     dineroADar += moneda
