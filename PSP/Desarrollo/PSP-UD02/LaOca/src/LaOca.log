@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-06T13:34:51</date>
+  <millis>1667734491535</millis>
+  <sequence>0</sequence>
+  <logger>LaOca</logger>
+  <level>FINE</level>
+  <class>LaOca</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Threads iniciados</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:51</date>
+  <millis>1667734491832</millis>
+  <sequence>1</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:51</date>
+  <millis>1667734491845</millis>
+  <sequence>2</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Has sacado un 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:51</date>
+  <millis>1667734491850</millis>
+  <sequence>3</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Tu posicion es 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492242</millis>
+  <sequence>4</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492243</millis>
+  <sequence>5</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Has sacado un 2</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492244</millis>
+  <sequence>6</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Tu posicion es 2</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492436</millis>
+  <sequence>7</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492437</millis>
+  <sequence>8</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492439</millis>
+  <sequence>9</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492627</millis>
+  <sequence>10</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492628</millis>
+  <sequence>11</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492628</millis>
+  <sequence>12</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Tu posicion es 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492772</millis>
+  <sequence>13</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492772</millis>
+  <sequence>14</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492773</millis>
+  <sequence>15</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Tu posicion es 7</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492856</millis>
+  <sequence>16</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492857</millis>
+  <sequence>17</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>Thread-5 - Has sacado un 6</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492858</millis>
+  <sequence>18</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>Thread-5 - Tu posicion es 6</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492896</millis>
+  <sequence>19</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492898</millis>
+  <sequence>20</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492899</millis>
+  <sequence>21</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492961</millis>
+  <sequence>22</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492961</millis>
+  <sequence>23</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492962</millis>
+  <sequence>24</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Tu posicion es 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492977</millis>
+  <sequence>25</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492977</millis>
+  <sequence>26</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Has sacado un 2</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492978</millis>
+  <sequence>27</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Tu posicion es 2</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492996</millis>
+  <sequence>28</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492997</millis>
+  <sequence>29</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Has sacado un 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:52</date>
+  <millis>1667734492997</millis>
+  <sequence>30</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Thread-2 - Tu posicion es 11</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493001</millis>
+  <sequence>31</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493002</millis>
+  <sequence>32</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493002</millis>
+  <sequence>33</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Tu posicion es 10</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493016</millis>
+  <sequence>34</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493016</millis>
+  <sequence>35</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Has sacado un 1</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493017</millis>
+  <sequence>36</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493172</millis>
+  <sequence>37</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493172</millis>
+  <sequence>38</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493173</millis>
+  <sequence>39</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Tu posicion es 6</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493244</millis>
+  <sequence>40</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493244</millis>
+  <sequence>41</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Has sacado un 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493245</millis>
+  <sequence>42</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Tu posicion es 7</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493299</millis>
+  <sequence>43</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>20</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493299</millis>
+  <sequence>44</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>20</thread>
+  <message>Thread-6 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493300</millis>
+  <sequence>45</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>20</thread>
+  <message>Thread-6 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493478</millis>
+  <sequence>46</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>22</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493478</millis>
+  <sequence>47</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>22</thread>
+  <message>Thread-8 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493479</millis>
+  <sequence>48</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>22</thread>
+  <message>Thread-8 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493550</millis>
+  <sequence>49</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493550</millis>
+  <sequence>50</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Has sacado un 1</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493551</millis>
+  <sequence>51</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Tu posicion es 7</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493697</millis>
+  <sequence>52</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493697</millis>
+  <sequence>53</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Has sacado un 1</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493698</millis>
+  <sequence>54</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Tu posicion es 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493752</millis>
+  <sequence>55</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493752</millis>
+  <sequence>56</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Has sacado un 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493753</millis>
+  <sequence>57</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>18</thread>
+  <message>Thread-4 - Tu posicion es 11</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493760</millis>
+  <sequence>58</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493760</millis>
+  <sequence>59</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493761</millis>
+  <sequence>60</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Tu posicion es 12</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493767</millis>
+  <sequence>61</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493767</millis>
+  <sequence>62</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>Thread-5 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493768</millis>
+  <sequence>63</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>19</thread>
+  <message>Thread-5 - Tu posicion es 11</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493844</millis>
+  <sequence>64</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493844</millis>
+  <sequence>65</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Has sacado un 6</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493845</millis>
+  <sequence>66</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>Thread-10 - Tu posicion es 9</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493858</millis>
+  <sequence>67</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493859</millis>
+  <sequence>68</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Has sacado un 4</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:53</date>
+  <millis>1667734493859</millis>
+  <sequence>69</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Tu posicion es 16</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494029</millis>
+  <sequence>70</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494029</millis>
+  <sequence>71</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494030</millis>
+  <sequence>72</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Tu posicion es 8</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494301</millis>
+  <sequence>73</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494301</millis>
+  <sequence>74</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Has sacado un 6</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494302</millis>
+  <sequence>75</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>23</thread>
+  <message>Thread-9 - Tu posicion es 16</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494365</millis>
+  <sequence>76</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494365</millis>
+  <sequence>77</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Has sacado un 3</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494366</millis>
+  <sequence>78</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Thread-3 - Tu posicion es 19</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494422</millis>
+  <sequence>79</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494422</millis>
+  <sequence>80</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494423</millis>
+  <sequence>81</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>21</thread>
+  <message>Thread-7 - Tu posicion es 13</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494509</millis>
+  <sequence>82</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>
+</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494509</millis>
+  <sequence>83</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Has sacado un 5</message>
+</record>
+<record>
+  <date>2022-11-06T13:34:54</date>
+  <millis>1667734494509</millis>
+  <sequence>84</sequence>
+  <logger>LaOca</logger>
+  <level>INFO</level>
+  <class>LaOca$Jugador</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Thread-1 - Tu posicion es 8</message>
+</record>
