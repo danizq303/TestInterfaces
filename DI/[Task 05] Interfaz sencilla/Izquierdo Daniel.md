@@ -36,10 +36,12 @@ Desde el menú de Constraint Widget añadiremos un padding de 16dp al margen der
 
 ## Modificaciones Realizadas
 
-He añadido un calendario debajo de los elemento añadidos anteriormente.
+He añadido un calendario debajo de los elemento añadidos anteriormente el cual tiene un margen superior de 64dp y 30dp de izquierdo y derecho.
 
 ![](9.png)
 
+![](10.png)
+
 ## Link GitHub
 
-a
+https://github.com/danizq303/TestInterfaces
