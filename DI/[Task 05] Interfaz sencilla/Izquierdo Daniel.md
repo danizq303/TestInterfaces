@@ -1,4 +1,4 @@
-# **[Task 04] App sencilla**
+# **[Task 05] Interfaz sencilla**
 
 ## Crear Interfaz
 
@@ -26,10 +26,16 @@ Seleccionaremos el botón y en el apartado de text le daremos al botón y seleec
 
 ![](6.png)
 
-Seleccionaremos ambos elemntos, le daremos click derecho y en el menu que aparece le daremos a "Create Vertical Chain"
+Seleccionaremos ambos elemntos, le daremos click derecho y en el menu que aparece le daremos a "Create Vertical Chain".
 
 ![](7.png)
 
-a
+Desde el menú de Constraint Widget añadiremos un padding de 16dp al margen derecho y clicaremos en el indicador de ancho dos veces para cambiar a Match Constraint. 
 
 ![](8.png)
+
+## Modificaciones Realizadas
+
+He añadido un calendario debajo de los elemento añadidos anteriormente.
+
+![](9.png)

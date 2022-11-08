@@ -108,8 +108,14 @@ class Personaje3 {
                 articulos.forEachIndexed { index, articulo2 -> println("$index - $articulo2") }
                 articulosVender.add(articulos[readln().toInt()])
             } else {
+
                 println("Cuantos articulos deseas vender (MAX:${articulos.size})")
                 var numArticulos = readln().toInt()
+
+                while (numArticulos > articulos.size) {
+                    println("Cuantos articulos deseas vender (MAX:${articulos.size})")
+                    numArticulos = readln().toInt()
+                }
 
                 while (numArticulos > 0) {
                     println("Que articulo deseas vender")
@@ -130,17 +136,16 @@ class Personaje3 {
     }
 
     private fun darDinero(articulosVender: List<Articulo2>) {
-        var dineroADar: Int
+        val valorTotal = articulosVender.sumOf { it.valor }
+        var dineroADar = 0
 
-        articulosVender.forEach { art ->
-            dineroADar = 0
-            puermaCoins.sortedDescending().forEach { moneda ->
-                while (dineroADar <= art.valor && art.valor - dineroADar >= moneda) {
-                    coins[moneda] = coins[moneda]!! + 1
-                    dineroADar += moneda
-                }
+        puermaCoins.sortedDescending().forEach { moneda ->
+            while (dineroADar <= valorTotal && valorTotal - dineroADar >= moneda) {
+                coins[moneda] = coins[moneda]!! + 1
+                dineroADar += moneda
             }
         }
+
     }
 
     private fun imprimirMochila(pesoActual: Int, valor: Int) {
@@ -243,7 +248,6 @@ fun main() {
 
     println("Monedas p1: ${personaje.coins}")
 
-    //personaje.robar(articulos)
     personaje.tradear(mercader, articulos)
 
     println("Monedas: ${personaje.coins}")
