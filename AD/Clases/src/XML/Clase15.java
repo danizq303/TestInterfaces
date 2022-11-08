@@ -1,4 +1,4 @@
-package Ficheros;
+package XML;
 
 import org.w3c.dom.*;
 
@@ -39,18 +39,48 @@ public class Clase15 {
         atributo.setValue("primero");
         elem.setAttributeNode(atributo);
 
-        elemSub = document.createElement("apellido");
+        elemSub = document.createElement("apellido1");
         texto = document.createTextNode("Sanz");
         elem.appendChild(elemSub);
         elemSub.appendChild(texto);
 
-        elemSub = document.createElement("apellido");
+        elemSub = document.createElement("apellido2");
         texto = document.createTextNode("Ortega");
         elem.appendChild(elemSub);
         elemSub.appendChild(texto);
 
         elem = document.createElement("departamento");
         texto = document.createTextNode("150");
+        raiz.appendChild(elem);
+        elem.appendChild(texto);
+
+
+        raiz = document.createElement("empleado");
+        document.getDocumentElement().appendChild(raiz);
+
+        elem = document.createElement("id");
+        texto = document.createTextNode("2");
+        raiz.appendChild(elem);
+        elem.appendChild(texto);
+
+        elem = document.createElement("apellidos");
+        raiz.appendChild(elem);
+        atributo = document.createAttribute("orden");
+        atributo.setValue("primero");
+        elem.setAttributeNode(atributo);
+
+        elemSub = document.createElement("apellido1");
+        texto = document.createTextNode("Izquierdo");
+        elem.appendChild(elemSub);
+        elemSub.appendChild(texto);
+
+        elemSub = document.createElement("apellido2");
+        texto = document.createTextNode("Bonilla");
+        elem.appendChild(elemSub);
+        elemSub.appendChild(texto);
+
+        elem = document.createElement("departamento");
+        texto = document.createTextNode("777");
         raiz.appendChild(elem);
         elem.appendChild(texto);
 

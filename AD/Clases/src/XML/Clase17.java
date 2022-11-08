@@ -1,4 +1,4 @@
-package Ficheros;
+package XML;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
@@ -38,6 +38,9 @@ class MiDefaultHandler extends DefaultHandler {
 
     public void startElement(String uri, String nombre, String nombreC, Attributes atts) {
         System.out.printf("\tComienzo elemento: %s %n", nombre);
+        for (int i = 0; i < atts.getLength(); i++) {
+            System.out.printf("\t\tAtributo: %s=%s %n", atts.getLocalName(i), atts.getValue(i));
+        }
     }
 
     public void endElement(String uri, String nombre, String nombreC) {
